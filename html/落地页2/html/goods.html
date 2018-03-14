@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+	</head>
+	<body>
+			<div class="list">
+				<div class="box" ng-repeat="x in item" ng-click='detail(x.url)'>
+					
+					<header>
+						<img src="img/trait/{{x.img}}.png"/>
+					</header>
+					<footer>
+						<p class="p1">{{x.name}}</p>
+						<p class="p2">¥{{x.currentPr}}<!--<span>¥{{x.oldmoney}}</span>--> </p>
+						<div class="iphone-btn" >0元抢购</div>
+					</footer>
+					
+				</div>
+				<div class="more" onclick="location.href='http://m.caimiing.com//overt/cash-tasks'">查看更多>></div>
+			</div>
+	</body>
+</html>

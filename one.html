@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<nav class="big">
+			<div class="d1">1</div>
+			<div class="d2">fsd</div>
+		</nav>
+	</body>
+</html>
+<style type="text/css">
+	*{margin: 0;padding: 0; list-style: none;}
+	.big{
+		height: 100%;
+	}
+	.d1{
+		width: 200px;
+		float: left;
+	}
+	.d2{
+		background: gray;
+		margin-left: 200px;
+	}
+</style>
+<script type="text/javascript">
+var Book = {}
+var name = '';
+Object.defineProperty(Book, 'name', {
+  set: function (value) {
+    name = value;
+    console.log('你取了一个书名叫做' + value);
+  },
+  get: function () {
+    return '《' + name + '》'
+  }
+})
+ 
+Book.name = 'vue权威指南';  // 你取了一个书名叫做vue权威指南
+console.log(Book.name);  // 《vue权威指南》
+</script>

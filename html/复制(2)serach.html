@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/serach.css"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	</head>
+	<body ng-app="app" ng-controller="one" ng-cloak>
+		<header class="search-head">
+			<div class="search-d1"></div>
+			<div class="input-box">
+				<div class="tit1 titiocn"></div>
+				<input type="text" ng-model="search_name" class="search-name" />
+				<div class="tit2 titiocn"></div>
+			</div>
+			<div class="search-d2" ng-click="searchGoods()">搜索</div>
+		</header>
+
+		
+		<ul class="search-text" ng-if="!historyShow">
+			<li ng-repeat="x in search_all |filter:search_name|limitTo:10" ng-click="selone(x)">{{x}}</li>
+		</ul>
+		<ul class="search-text2" ng-if="historyShow">
+			<li ng-repeat="x in history_search|limitTo:10" ng-click="selone(x)">{{x}}</li>
+			<button ng-click="clean()">清空记录</button>
+		</ul>
+		{{history_search}}
+		<p></p>
+		{{search_all}}
+	</body>
+</html>
+<script src="../js/angular1.4.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery3.1.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+
+
+function iscook(cookie) {
+	if($.cookie(cookie)==''||$.cookie(cookie)==undefined||$.cookie(cookie)==null){
+		return false
+	}else{
+		return true
+	}
+}
+var app=angular.module('app',[])   //,$cookies
+app.controller('one',function ($scope) {
+   if(iscook('all')){
+   	console.log(111)
+   	console.log($.cookie('all'))
+   	$scope.search_all=$.cookie('all').split(',')
+   }else{
+   	//http
+   	  var all=['手机','苹果','132','52558','1555','手机iphonex']
+   	  $scope.search_all=all;
+   	  $.cookie('all',all,{ expires: 5000})
+   	 console.log('http---search_all')
+   }
+   
+  	if(iscook('history_search')){
+  		console.log($.cookie('history_search'))
+  		$scope.history_search=$.cookie('history_search').split(',')
+  	}else{
+  		$scope.history_search=[]
+  	}
+   $scope.historyShow=true;
+   $scope.search_name=''
+	$scope.$watch('search_name',function(newValue,oldValue){
+		if(newValue==''){
+			 $scope.search_name='';
+			 $scope.historyShow=true;
+		}else{
+			 $scope.search_name=newValue;
+			$scope.historyShow=false;
+		}
+	});
+	$scope.clean=function () {
+		$scope.history_search=[]
+		$.cookie('history_search','')
+	}
+	$scope.searchGoods=function () {
+		//去重
+		if($scope.search_name==''){
+			return false;
+		}
+		var index=$scope.history_search.indexOf($scope.search_name)
+		if(index==-1){
+			console.log($scope.history_search)
+			$scope.history_search.unshift($scope.search_name)
+			$.cookie('history_search',$scope.history_search,{ expires: 60000*60*24*300})
+		}
+	}
+	$scope.selone=function (obj) {
+		$scope.search_name=obj
+	}
+})
+
+</script>

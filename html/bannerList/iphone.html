@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>新奇配件</title>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/iphone.css"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	</head>
+	<body ng-app="app" ng-controller="one">
+		<div class="fanhui" onclick="javascript:history.go(-1);">
+			<img src="img/iphone/fanhui.png" alt="">
+		</div>
+		<section class="h5">
+				<header class="iphone-banner">
+					<img src="img/iphone/banner.png"/>
+				</header>
+				<img src="img/iphone/goods.png" class="goods" ng-click="gos('https://h5.youzan.com/v2/goods/3emutk4c2h578')"/>
+				<p class="name">新奇配件</p>
+			<main class='main'>
+				<div class="box" ng-repeat="x in item|orderBy:'money'" ng-click="gos(x.urls)">
+					<header>
+						<img lazy-src="img/fittings/{{x.img}}.jpg"/>
+					</header>
+					<footer>
+						<p class="p1">{{x.name}}</p>
+						<p class="p2">¥{{x.money}}</p>
+						<div class="iphone-btn" >返{{x.back}}元</div>
+					</footer>
+				</div>
+			</main>
+			<nav class="line">
+				<div class="d1"></div>
+				<div class="d2">活动细节</div>
+				<div class="d1"></div>
+			</nav>
+			<footer class="iphone-foot">
+					<p>1.活动时间：2017年11月18日~2017年12月18日，购物返现，抢完即止。 </p>
+					<p>2.本次活动“购物返现”与“100%全返产品”只有VIP会员有权限参与活动。</p>
+					<p> 3.在法律许可范围内，采蜜平台保留变更、调整、终止本活动之权利并有权调整或变换活动商品、权益或服务。</p>
+					<p> 4.本次活动最终解释权，归采蜜平台所有</p>
+			</footer>
+		</section>
+
+	</body>
+</html>
+<script src="http://cdn.staticfile.org/angular.js/1.2.18/angular.min.js"></script>
+<script src="js/me-lazyload.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/json.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	
+	var app=angular.module('app',['me-lazyload'])
+	app.controller('one',function ($scope) {
+		 $scope.gos=function (urls) {
+		 	window.location = urls
+		 }
+	   $scope.item=list1
+	})
+function GetQueryString(name)
+{
+     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+     var r = window.location.search.substr(1).match(reg);
+     if(r!=null)return  unescape(r[2]); return null;
+}
+ 
+// 调用方法
+var is=GetQueryString("isFromapp");
+if(is=='1'||is=='2'){
+	$('.fanhui').hide()
+}
+</script>

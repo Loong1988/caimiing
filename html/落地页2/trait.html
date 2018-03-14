@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="html/goods.css"/>
+		<link rel="stylesheet" type="text/css" href="css/trait.css"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="js/adaptive.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body ng-app="app" ng-controller="one">
+		<header class="tr-head">
+			<img src="img/trait/bac-head.png"/>
+		</header>
+		<section class="list-box" ng-include="'html/goods.html'">
+			
+		</section>
+		
+		<footer class="tr-footer">
+			
+		</footer>
+	</body>
+</html>
+<script src="js/angular1.4.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/trait.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	
+	var app=angular.module('app',[])   
+	app.controller('one',function ($scope) {
+	   $scope.item=list1	
+	   $scope.detail=function (urls) {
+	   		location.href=urls
+	   }
+	})
+	
+</script>

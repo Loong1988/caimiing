@@ -1,0 +1,111 @@
+body {
+  background: #59187B; }
+
+.fanhui img {
+  width: 7vw;
+  height: 7vw;
+  z-index: 2;
+  position: fixed;
+  left: 3.7vw;
+  top: 4vw; }
+
+.h5 {
+  font-size: 0; }
+  .h5 .iphone-banner img {
+    width: 100%;
+    height: 51.4814814815vw; }
+  .h5 .goods {
+    width: 92.5925925926vw;
+    margin: 3.7037037037vw 3.7037037037vw 0 3.7037037037vw; }
+  .h5 .name {
+    height: 11.1111111111vw;
+    color: #fff;
+    font-size: 5.1851851852vw;
+    text-align: center;
+    line-height: 11.1111111111vw;
+    background: url(../img/iphone/bac.png);
+    margin: 2.7777777778vw 0; }
+  .h5 .main {
+    width: 92.5925925926vw;
+    margin: 3.7037037037vw; }
+    .h5 .main .box {
+      width: 44.9074074074vw;
+      background: #fff;
+      float: left;
+      margin-bottom: 2.5925925926vw; }
+      .h5 .main .box header {
+        height: 41.6666666667vw; }
+        .h5 .main .box header img {
+          width: 100%;
+          height: 100%; }
+      .h5 .main .box footer {
+        font-size: 3.3333333333vw;
+        height: 21.9444444444vw;
+        position: relative; }
+        .h5 .main .box footer .p1 {
+          width: 40.7407407407vw;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          margin: 1.3888888889vw auto; }
+        .h5 .main .box footer .p2 {
+          width: 40.7407407407vw;
+          margin: auto;
+          text-align: right;
+          color: #D85E45;
+          margin-bottom: 1.3888888889vw; }
+        .h5 .main .box footer .iphone-btn {
+          width: 41.6666666667vw;
+          height: 7.4074074074vw;
+          line-height: 7.4074074074vw;
+          background: #D85E45;
+          color: #FFF;
+          text-align: center;
+          border-radius: 0.9259259259vw;
+          margin: auto;
+          position: absolute;
+          bottom: 1.7vw;
+          left: 0;
+          right: 0; }
+    .h5 .main .box:nth-child(2n) {
+      margin-left: 2.5925925926vw; }
+  .h5 .line {
+    width: 92.5925925926vw;
+    height: 4.6296296296vw;
+    display: flex;
+    margin: 4.6296296296vw auto;
+    justify-content: space-between; }
+    .h5 .line .d1 {
+      width: 33.3333333333vw;
+      height: 4.6296296296vw;
+      position: relative; }
+    .h5 .line .d2 {
+      font-size: 3.7037037037vw;
+      text-align: center;
+      width: 25.9259259259vw;
+      height: 4.6296296296vw;
+      color: #FFFFFF; }
+    .h5 .line .d1:after {
+      content: '';
+      position: absolute;
+      bottom: 50%;
+      left: 0;
+      background: #FFFFFF;
+      width: 100%;
+      height: 1px;
+      -webkit-transform: scaleY(0.5);
+      transform: scaleY(0.5);
+      -webkit-transform-origin: 0 0;
+      transform-origin: 0 0; }
+  .h5 .iphone-foot {
+    width: 85.1851851852vw;
+    padding: 3.7037037037vw;
+    margin: auto;
+    background: #632683;
+    font-size: 2.962962963vw;
+    color: #fff;
+    margin-bottom: 5.5555555556vw; }
+    .h5 .iphone-foot p {
+      line-height: 200%; }
+
+/*# sourceMappingURL=iphone.css.map */

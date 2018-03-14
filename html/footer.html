@@ -1,0 +1,32 @@
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/footer.css"/>
+		<meta charset="UTF-8"/>
+	<div class="w_last_bottom  tabs">
+			<ul>
+				<li class="actTab">
+					<a class="w_bottom_a1" id="lnkIndexPage">
+						<!--<img class="w_bottom_img1" src="../img/common/betiful.jpg">-->
+						<div class="img-tab1"></div>
+						<div class="w_bottom_text">首页</div>
+				</a></li>
+				<li><a class="w_bottom_a2" id="lnkInvest" >
+					<div class="img-tab1"></div>
+						<div class="w_bottom_text">高额</div>
+				</a></li>
+				<li><a class="w_bottom_a3" id="lnkActivity" >
+					<div class="img-tab1"></div>
+						<div class="w_bottom_text">蜜糖</div>
+				</a></li>
+				<li><a class="w_bottom_a4" id="lnkMyAccount" > 
+					<div class="img-tab1"></div>
+						<div class="w_bottom_text">我的</div>
+				</a></li>
+				<div class="w_clear"></div>
+			</ul>
+		</div>
+<script src="../js/jquery-2.1.1.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	$('.tabs li').click(function () {
+		$(this).addClass('actTab').siblings().removeClass('actTab')
+	})
+</script>

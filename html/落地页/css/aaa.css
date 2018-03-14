@@ -1,0 +1,9 @@
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(red), to(green)), url(../img/a1001.png) no-repeat center / 100%;
+  background: linear-gradient(to top, red, green), url(../img/a1001.png) no-repeat top center / 100%;
+} /*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImFhYS5sZXNzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksYUFBYTtDQUNoQjtBQUNEO0lBQ0ksYUFBYTtJQUNiLGtJQUErQztJQUEvQyxpR0FBK0M7Q0FDbEQiLCJmaWxlIjoiYWFhLmxlc3MiLCJzb3VyY2VzQ29udGVudCI6WyJodG1se1xyXG4gICAgaGVpZ2h0OiAxMDAlO1xyXG59XHJcbmJvZHl7XHJcbiAgICBoZWlnaHQ6IDEwMCU7XHJcbiAgICBiYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQoIHRvIHRvcCxyZWQsIGdyZWVuKVxyXG59XHJcbiJdfQ== */
+/*# sourceMappingURL=aaa.css.map */

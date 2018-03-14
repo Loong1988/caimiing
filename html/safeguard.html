@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../css/high.css" />
+		<link rel="stylesheet" type="text/css" href="../css/safeguard.css" />
+	</head>
+
+	<body ng-app="app" ng-controller="one" ng-cloak>
+		<header class="header header_position">
+			<nav></nav>
+			维权
+			<aside class="qq">
+				QQ客服
+			</aside>
+		</header>
+		<header class="head-all">
+
+			<header class="head">
+				<nav ng-repeat="item in tabs" ng-click="tabsChange($index)" ng-class="{act:act_index==$index}">{{item}}</nav>
+
+			</header>
+
+			<header class="head-line scale-1px">
+				<span ng-repeat="item in tabs" ng-class="{act:act_index==$index}"></span>
+
+			</header>
+
+		</header>
+
+		<section class="sel">
+			<div class="left" ng-show="act_index==0">
+
+				<ul class="condition">
+					<li>采蜜和贷款平台使用同一手机号</li>
+					<li>请使用采蜜注册手机号进行投资</li>
+					<li>注册新账号并投资</li>
+					<li>不可使用优惠券</li>
+					<li>请确认您或朋友的贷款<span>符合上述要求</span>,并且<span>贷款时间超过2天</span>(平台审核期为48小时)。</li>
+				</ul>
+				
+				<div class="datum">
+					<ul>
+						<li class="name">
+							<div class="left">投资方式</div>
+							<div class="right">
+								<span class="sp1" ng-class="{act:datum_index==0}" ng-click="datum_tab(0)">推荐好友</span>
+								<span class="sp2"  ng-class="{act:datum_index==1}" ng-click="datum_tab(1)">我要投资</span>
+						    </div>
+						</li>							
+
+						<li class="list" ng-repeat="item in datum">
+							<div class="left">{{item.name}}</div>
+							<div class="right">
+								<input type="tel" name="" id="" value="" placeholder="{{item.place}}"/>
+							</div>
+						</li>
+					</ul>
+					
+				</div>
+				<div class="safe-btn">
+					提交
+				</div>
+
+			</div>
+
+			<div class="right" ng-show="act_index==1">
+				<nav class="list-one">
+					<table border="0" cellspacing="0" cellpadding="0">
+
+						<tr>
+							<td>购物方式</td>
+							<td>推荐好友</td>
+						</tr>
+						<tr>
+							<td>推广页手机号</td>
+							<td>110</td>
+						</tr>
+						<tr>
+							<td>第三方手机号</td>
+							<td>120</td>
+						</tr>
+						<tr>
+							<td>购物金额</td>
+							<td>110元</td>
+						</tr>
+					</table>
+					<div class=" scale-1px">
+						审核中
+					</div>
+				</nav>
+				<nav class="list-one">
+					<table border="0" cellspacing="0" cellpadding="0">
+
+						<tr>
+							<td>购物方式</td>
+							<td>推荐好友</td>
+						</tr>
+						<tr>
+							<td>推广页手机号</td>
+							<td>110</td>
+						</tr>
+						<tr>
+							<td>第三方手机号</td>
+							<td>120</td>
+						</tr>
+						<tr>
+							<td>购物金额</td>
+							<td>110元</td>
+						</tr>
+					</table>
+					<div class="scale-1px error">
+						<span class="sp1">审核失败</span>
+						<span class="sp2">投资账号不符</span>
+					</div>
+				</nav>
+
+				<nav class="list-one">
+					<table border="0" cellspacing="0" cellpadding="0">
+
+						<tr>
+							<td>购物方式</td>
+							<td>推荐好友</td>
+						</tr>
+						<tr>
+							<td>推广页手机号</td>
+							<td>110</td>
+						</tr>
+						<tr>
+							<td>第三方手机号</td>
+							<td>120</td>
+						</tr>
+						<tr>
+							<td>购物金额</td>
+							<td>110元</td>
+						</tr>
+					</table>
+					<div class="scale-1px error">
+						<span class="sp1">审核失败</span>
+						<span class="sp2">投资账号不符</span>
+					</div>
+				</nav>
+			</div>
+		</section>
+	</body>
+
+</html>
+<style type="text/css">
+	.head-all {
+		top: 12.5vw;
+	}
+</style>
+<script src="../js/angular1.4.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	var app = angular.module('app', [])
+	app.controller('one', function($scope) {
+		$scope.tabs = ['申请维权', '申请记录']
+		$scope.act_index = 0;
+		$scope.datum_index=0;
+		
+		$scope.datum0=[
+		{name:'第三方手机号',place:'好友在贷款平台使用的手机号'},
+		{name:'投资金额',place:'好友贷款的金额'},
+		]
+		$scope.datum1=[{name:'推广页手机号',place:'好友在推广页面提交的手机号'},
+		{name:'第三方手机号',place:'好友在贷款平台使用的手机号'},
+		{name:'投资金额',place:'好友贷款的金额'},
+		]
+		$scope.datum=$scope.datum0
+		$scope.tabsChange = function(index) {
+			$scope.act_index = index
+			console.log(index)
+		}
+		$scope.datum_tab = function(index) {
+			$scope.datum_index = index
+			if(index==0){
+				$scope.datum=$scope.datum0
+			}else{
+				$scope.datum=$scope.datum1
+			}
+		}
+	})
+</script>

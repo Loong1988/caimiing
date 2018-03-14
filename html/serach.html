@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/serach.css"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	</head>
+	<body ng-app="app" ng-controller="one" ng-cloak>
+		<header class="search-head">
+			<div class="search-d1"></div>
+			<div class="input-box">
+				<div class="tit1 titiocn"></div>
+				<input type="text" ng-model="search_name" class="search-name" />
+				<div class="tit2 titiocn" ng-if='search_name' ng-click="clean_search()"></div>
+			</div>
+			<div class="search-d2" ng-click="searchGoods()">搜索</div>
+		</header>
+		<ul class="search-text2" ng-if="history_search.length>0">
+			<li class="one scale-1px-bottom">历史搜索</li>
+			<li class="scale-1px-bottom" ng-repeat="x in history_search|limitTo:10" ng-click="selone(x)">{{x}}</li>
+			
+		</ul>
+		<div ng-click="clean()" ng-if="history_search.length>0" class="clean-btn">清空记录</div>
+		<button ng-click="my()">啊时代发生地方</button>
+<!--		<div class="selet-goods">
+			<nav class="up">
+				<span>分类</span>
+				<ul class="ull">
+					<li ng-repeat="name in classify" ng-class="{'acts':$index==act}"  ng-click="selctTit($index)">{{$index}}{{name}}</li>
+				</ul>
+			</nav>
+			<footer class="foot-btn">
+				<div class="left" ng-click="clean_type()">清空</div>
+				<div class="right">确定</div>
+			</footer>
+		</div>-->
+
+	</body>
+</html>
+<script src="../js/angular1.4.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery3.1.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+$(function () {
+	var h=$('.selet-goods').height()
+	var foot=$('.foot-btn').height()
+	
+	var lasth=h-foot-20;
+	$('.selet-goods .up').height(lasth)
+})
+
+function iscook(cookie) {
+	if($.cookie(cookie)==''||$.cookie(cookie)==undefined||$.cookie(cookie)==null){
+		return false
+	}else{
+		return true
+	}
+}
+var app=angular.module('app',[]);   //,$cookies
+app.service('sss', function() {
+   this.myFunc = function($scope,fun){
+     	console.log($scope.classify) 
+     	fun()
+     	
+    }
+});
+app.controller('one',function ($scope,sss) {
+	$scope.classify=['男人','女人','家电','手机','美妆','养生','其他','21']
+   	$scope.my=function () {
+		sss.myFunc($scope,a)
+	}
+   	function a() {
+   		console.log('aaa')
+   	}
+  	if(iscook('history_search')){
+  		console.log($.cookie('history_search'))
+  		$scope.history_search=$.cookie('history_search').split(',')
+  	}else{
+  		$scope.history_search=[]
+  	}
+   $scope.historyShow=true;
+
+	$scope.clean=function () {
+		$scope.history_search=[]
+		$.cookie('history_search','')
+	}
+	$scope.searchGoods=function () {
+		//去重
+		console.log($scope.search_name)
+		if($scope.search_name==''||$scope.search_name==undefined){
+			console.log('--------------1')
+			return false;
+		}
+		console.log('-------------3')
+		var index=$scope.history_search.indexOf($scope.search_name)
+
+		if(index==-1){
+			if($scope.history_search.length>=3){
+				$scope.history_search.pop()
+		    }
+			console.log($scope.history_search)
+			$scope.history_search.unshift($scope.search_name)
+			$.cookie('history_search',$scope.history_search,{ expires: 60000*60*24*300})
+		}
+	}
+	$scope.clean_search=function () {
+		$scope.search_name=''
+	}
+	
+	$scope.selone=function (obj) {
+		$scope.search_name=obj
+	}
+	//品类筛选
+	$scope.act=-1;
+	$scope.selctTit=function (index) {
+		if($scope.act==index){
+			$scope.act=-1;
+		}else{
+			$scope.act=index;
+		}
+	}
+	$scope.clean_type=function () {
+		$scope.act=-1;
+	}
+	
+
+})
+  
+</script>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="../js/angular1.4.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="../css/high.css"/>
+	</head>
+	<body ng-app="app" ng-controller="one">
+	<header class="head-all">
+		
+<div ng-if="test(1,'1')">
+	
+</div>
+		<header class="head">
+			<nav style="width: 14vw;" ng-repeat="item in tabs" ng-click="tabsChange($index)" ng-class="{act:act_index==$index}">{{item}}</nav>
+			<nav ng-click="selmethods()" style="width: 14vw;">{{sel}}</nav>
+		</header>
+		
+		<header class="head-line scale-1px">
+			<span ng-repeat="item in tabs" ng-class="{act:act_index==$index}"></span>
+			<span></span>
+		</header>
+	</header>
+		<div class="select sel-js up-sel">
+			<nav ng-click="selChange($index)" ng-repeat="item in selects" ng-class="{act:sel_index==$index}">{{item}}</nav>
+		</div>
+<div class="no-list2">
+				<p style="margin-top: 4vw;">抱歉!您想找的任务已经抢光了</p>
+				<p style="margin-top: 1vw;">试试别的任务吧</p>
+</div>
+
+
+<section class="index-list">
+	<div class="box">
+		<div class="left">
+			<img src="../img/index_2/friend.png"/>
+		</div>
+		<div class="right">
+			<p class="friend">邀请好友</p>
+			<p class="f1">推荐成功，您和好友各得1元</p>
+			<p class="f1">200元封顶，多推多得</p>
+			<nav class="red"><span>+200</span><span class="small">元</span></nav>
+		</div>
+	</div>
+	<div class="expand">
+		推荐好友，0消费赚现金
+	</div>
+	<section class="task-list">
+		<div class="task-box task1">
+			<nav class="up">
+					<div class="left">
+						<img src="../img/index_2/tab1.jpg"/>
+					</div>
+					<div class="right scale-1px">
+						<p class="tit">理财理财<span class="red"><span>日利率 </span>0.02%</span> </p>
+						<p class="cont">投资每万元您和好友共得100元现金</p>
+					</div>
+			</nav>
+			<nav class="down">
+				<div class="d1">已投资</div>
+				<div class="d2">上次推广：1小时以前</div>
+				<div class="d3">
+					<dl class="red">
+						<dt>每万元</dt>
+						<dd class="money"><span>+2910</span><span class="small">元</span></dd>
+					</dl>
+				</div>
+			</nav>
+		</div>
+	<div class="task-box task2">
+		<nav class="up">
+				<div class="left">
+					<img src="../img/index_2/tab2.jpg"/>
+				</div>
+				<div class="right scale-1px">
+					<p class="tit">人人贷款<span class="red"><span>日利率 </span>0.02%</span> </p>
+					<p class="cont">贷款每万元您和好友共得100元现金</p>
+				</div>
+		</nav>
+		<nav class="down">
+			<div class="d1">待接单</div>
+			<div class="d2"></div>
+			<div class="d3">
+				<dl class="red">
+					<dt>每万元</dt>
+					<dd class="money"><span>+2910</span><span class="small">元</span></dd>
+				</dl>
+			</div>
+		</nav>
+	</div>
+	<div class="task-box task3">
+		<nav class="up">
+				<div class="left">
+					<img src="../img/index_2/tab3.jpg"/>
+				</div>
+				<div class="right scale-1px">
+					<p class="tit">iphone8
+						<span class="red">
+							￥5999<span class="del">￥6888 <span>
+						</span>
+					</p>
+					<p class="cont1">元您和safasdfas款每万元您和好友共得100元现金</p>
+					<p class="cont2">贷款每万元您和好友共得100元现金贷款每万元您和好友共得100元现金</p>
+				</div>
+		</nav>
+		<nav class="down">
+			<div class="d1">待接单</div>
+			<div class="d2">上次推广：1小时以前</div>
+			<div class="d3">
+				<dl class="red">
+					<dt>每单</dt>
+					<dd class="money"><span>+10</span><span class="small">元</span></dd>
+				</dl>
+			</div>
+		</nav>
+	</div>
+	<nav class="more">
+		更多
+		<img src="../img/index_2/_right.png"/>
+	</nav>
+		
+	</section>
+
+</section>
+
+		<div class="ng-gray" ng-hide="upsel" ng-click='selmethods()'></div>
+		<!--angular安全机制底部导航js失效。jsp无问题-->
+		<div ng-include="'footer.html'"></div>
+		
+	</body>
+</html>
+<script src="../js/jquery-2.1.1.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/angular-animate1.46.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	
+	var app=angular.module('app',['ngAnimate'])   
+	app.controller('one',function ($scope) {
+		$scope.aa='1';
+		$scope.tabs=['全部','购物','投资','贷款']
+		//$scope.tabs=['全部1','全部2','全部3','全部4']
+		$scope.selects=['不限','待接单','进行中']
+		$scope.act_index=0;
+		$scope.sel_index=0;
+		$scope.sel='筛选';
+		$scope.upsel=true;
+	    $scope.tabsChange=function(index){
+			$scope.act_index=index
+			
+	    }
+	    $scope.test=function(str,str2){
+			
+	    }
+	    $scope.selChange=function(index){
+			$scope.sel_index=index
+			if(index==0){
+				$scope.sel='筛选';
+			}else{
+				$scope.sel=$scope.selects[index]
+			}
+			$scope.upsel=true;
+			console.log(index+'---')
+			$('.sel-js').toggleClass('up-sel')
+	    }
+	    $scope.selmethods=function(){
+	    	console.log('2222')
+			$scope.upsel=!$scope.upsel;
+			
+			$('.sel-js').toggleClass('up-sel')
+			
+	    }
+	})
+	var obj={name:'aa',age:1}
+
+</script>

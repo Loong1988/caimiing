@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+	</head>
+	<body>
+			<div class="list">
+				<div class="box" ng-repeat="x in item" ng-click='detail(x.url)'>
+					
+					<header>
+						<img src="img/trait/{{x.img}}.png"/>
+					</header>
+					<footer>
+						<p class="p1">{{x.name}}</p>
+						<p class="p2">¥{{x.currentPr}}<!--<span>¥{{x.oldmoney}}</span>--> </p>
+						<div class="iphone-btn" >购物返{{x.cashback | number : 0}}元</div>
+					</footer>
+					
+				</div>
+				<div class="more" onclick="golink()">查看更多>></div>
+			</div>
+	</body>
+</html>

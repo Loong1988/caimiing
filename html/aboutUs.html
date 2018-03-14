@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/aboutUs.css"/>
+	</head>
+	<body ng-app="app" ng-controller="one">
+		<nav ng-if="us">
+			<header class="header header_position">
+				<nav onclick="javascript:history.go(-1);"></nav>
+				关于我们
+			</header>
+			
+			<section class="abouts"> 
+				<img src="../img/aboutUs/logo.png" class="logo"/>
+				<p class="version">V2.0</p>
+				
+				<p class="text">“采蜜”是一个专门为商家提供产品推广的平台。许多商家为了推广会给到平台可观的提成，这其中大部分商家为了开拓市场冲销量都是亏本在平台做推广。而“蜜粉”需要把“采蜜”推荐给身边有需要的朋友，让他们享受到优惠和返利的同时，自己也可持续得到商家给的提成，这是一件利人利己且有意义的事情。采蜜平台将为“蜜粉”提供源源不断的可观收入。</p>
+				<ul class="us">
+					<li class="scale-1px">分享给好友</li>
+					<li ng-click="contact()">联系我们</li>
+				</ul>
+				
+				<nav class="rule">
+					<div class="left">服务协议</div>
+					<div class="right">免责声明</div>
+				</nav>
+			</section>
+		</nav>
+		<nav ng-if="!us">
+			<header class="header header_position">
+				<nav ng-click="contact()"></nav>
+				关于我们
+			</header>
+			<div class="boxone">
+				<header>
+					
+				</header>
+				<img src="../img/aboutUs/qq2.png" class="qrcode"/>
+				<p class="explain">QQ客服：1419967204</p>
+			</div>
+		</nav>
+	</body>
+</html>
+<script src="../js/angular1.4.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	
+	var app=angular.module('app',[])   
+	app.controller('one',function ($scope) {
+		$scope.us=true;
+	   $scope.contact=function(){
+			$scope.us=!$scope.us;
+	   }
+	})
+
+</script>

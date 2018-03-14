@@ -1,0 +1,195 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>菜鸟教程(runoob.com)</title>
+    <link href="https://cdn.bootcss.com/ionic/1.3.2/css/ionic.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/ionic/1.3.2/js/ionic.bundle.min.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<script src="../js/angular1.4.js" type="text/javascript" charset="utf-8"></script>
+<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+<link rel="stylesheet" type="text/css" href="../css/index.css"/>
+<script type="text/javascript" src="../js/jquery-2.1.1.js"></script>
+<script src="../js/index.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="../js/swiper2.min.js"></script>
+    <script type="text/javascript">
+    angular.module('ionicApp', ['ionic'])
+
+    .controller('SlideController', function($scope) {
+      
+      $scope.myActiveSlide = 0;
+	 $scope.banners = ['../img/aboutUs/qq2.png','../img/aboutUs/logo.png'];
+      
+    })
+    </script>
+    <style type="text/css">
+    .slider {
+      height: 40vw;
+    }
+   .slider-slide {
+      color: #000; 
+      background-color: #fff; text-align: center; 
+      font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; font-weight: 300; }
+    .blue {
+      background-color: gainsboro;
+    }
+
+    .yellow {
+      background-color: yellow;
+    }
+
+    .pink {
+      background-color: pink;
+    }
+		.box{ 
+      height:100%; 
+    } 
+    .box h1{
+      position:relative; top:50%; transform:translateY(-50%); 
+    }
+    </style>
+  </head>
+
+  <body class="ss" ng-app="ionicApp" animation="slide-left-right-ios7" ng-controller="SlideController">
+<div class="swiper-head">
+  <ion-slide-box active-slide="myActiveSlide" auto-play="true" does-continue="true" slide-interval=2000>
+    <ion-slide ng-repeat='item in banners'>
+      <div class="box blue">
+      	
+      	<img src="{{item}}"/>
+      </div>
+    </ion-slide>
+
+  </ion-slide-box>
+  
+  
+  
+  <aside class="swiper-msg">
+	            <div class="left-img"></div>
+                <div class="scrollNews">
+                    <ul>
+                        <li>金融平台2016年6月26日正式上线！金融平台2016年6月26日正式上线！</li>
+                        <li>小红理财</li>
+                        <li>小红理财333333333333333</li>
+                        <li>小红理财4444444444444444</li>
+                    </ul>
+                </div>
+</aside>
+</div>
+<!--滑动通知end-->
+<section class="index-activity">
+	<div class="left">
+		<dl>
+			<dt>推广领现</dt>
+			<dd>2.0全新上线</dd>
+		</dl>
+		
+	</div>
+	<div class="right">		
+		<dl>
+			<dt>新手攻略</dt>
+			<dd>1分钟就毕业</dd>
+		</dl>
+	</div>
+</section>
+   <section class="index-list">
+	<div class="box">
+		<div class="left">
+			<img src="../img/index_2/friend.png"/>
+		</div>
+		<div class="right">
+			<p class="friend">邀请好友</p>
+			<p class="f1">推荐成功，您和好友各得1元</p>
+			<p class="f1">200元封顶，多推多得</p>
+			<nav class="red"><span>+200</span><span class="small">元</span></nav>
+		</div>
+	</div>
+	<div class="expand">
+		推荐好友，0消费赚现金
+	</div>
+	<section class="task-list">
+<!--		<div class="order-head">
+			<nav class="tit">
+				<span class="unit">每万元</span>
+				<nav class="red"><span>+200</span><span class="small">元</span></nav>
+			</nav>
+		</div>-->
+		<div class="task-box task1">
+			<nav class="up">
+					<div class="left">
+						<img src="../img/index_2/tab1.jpg"/>
+					</div>
+					<div class="right scale-1px">
+						<p class="tit">理财理财<span class="red"><span>日利率 </span>0.02%</span> </p>
+						<p class="cont">投资每万元您和好友共得100元现金</p>
+					</div>
+			</nav>
+			<nav class="down">
+				<div class="d1">已投资</div>
+				<div class="d2">上次推广：1小时以前</div>
+				<div class="d3">
+					<dl class="red">
+						<dt>每万元</dt>
+						<dd class="money"><span>+2910</span><span class="small">元</span></dd>
+					</dl>
+				</div>
+			</nav>
+		</div>
+	<div class="task-box task2">
+		<nav class="up">
+				<div class="left">
+					<img src="../img/index_2/tab2.jpg"/>
+				</div>
+				<div class="right scale-1px">
+					<p class="tit">人人贷款<span class="red"><span>日利率 </span>0.02%</span> </p>
+					<p class="cont">贷款每万元您和好友共得100元现金</p>
+				</div>
+		</nav>
+		<nav class="down">
+			<div class="d1">待接单</div>
+			<div class="d2"></div>
+			<div class="d3">
+				<dl class="red">
+					<dt>每万元</dt>
+					<dd class="money"><span>+2910</span><span class="small">元</span></dd>
+				</dl>
+			</div>
+		</nav>
+	</div>
+	<div class="task-box task3">
+		<nav class="up">
+				<div class="left">
+					<img src="../img/index_2/tab3.jpg"/>
+				</div>
+				<div class="right scale-1px">
+					<p class="tit">iphone8
+						<span class="red">
+							￥5999<span class="del">￥6888 <span>
+						</span>
+					</p>
+					<p class="cont1">元您和safasdfas款每万元您和好友共得100元现金</p>
+					<p class="cont2">贷款每万元您和好友共得100元现金贷款每万元您和好友共得100元现金</p>
+				</div>
+		</nav>
+		<nav class="down">
+			<div class="d1">待接单</div>
+			<div class="d2">上次推广：1小时以前</div>
+			<div class="d3">
+				<dl class="red">
+					<dt>每单</dt>
+					<dd class="money"><span>+10</span><span class="small">元</span></dd>
+				</dl>
+			</div>
+		</nav>
+	</div>
+	<nav class="more">
+		更多
+		<img src="../img/index_2/_right.png"/>
+	</nav>
+		
+	</section>
+
+</section> 
+    
+<div ng-include="'footer.html'"></div>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/partner.css"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	</head>
+	<body class="par" ng-app="app" ng-controller="one">
+				<div class="fanhui" onclick="javascript:history.go(-1);">
+			<img src="img/fanhui.png" alt="">
+		</div>
+		<img src="img/partner/shareIcon.png" style="display: none;"/>
+		<img src="img/partner/bac.png" class="bac"/>
+		<div class="par-btn">
+			<img src="img/partner/btn1.png" class="btn1" ng-click="goods()"/>
+			<img src="img/partner/btn2.png" class="btn2" ng-click="share()"/>
+		</div>
+		<footer class="share" >
+			<img src="img/partner/wx.png" class="wx" style="display: none;"/>
+			<img src="img/partner/bor.png" class="bro" style="display: none;"/>
+		</footer>
+		<div class="gray_tk"  ng-click="share(2)" style="display: none;"></div>
+	</body>
+</html>
+<script src="js/angular1.4.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/browsers.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery-2.1.1.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	   var t=isWeiXin()
+	   var v2=GetQueryString('from');
+		if(v2){
+			document.querySelector('.fanhui').style.display='none'
+			
+		}
+	   var shareParameter={
+		   "icon":"http://m.caimiing.com/m/spread/img/partner/shareIcon.png",
+		   "tit":"多份工资，动动手指就赚！",
+		   "cont":"成为采蜜合伙人，月月有惊喜",
+		   "url":"http://m.caimiing.com/m/spread/partner.html"	   
+	   }
+	   var arr=["http://m.caimiing.com/m/spread/img/partner/shareIcon.png",
+	   "多份工资，动动手指就赚！",
+	   "成为采蜜合伙人，月月有惊喜",
+	   "http://m.caimiing.com/m/spread/partner.html"	  
+	   ]
+	   var app=angular.module('app',[])   
+	   app.controller('one',function ($scope) {
+	   	$scope.tk=false
+	   	$scope.iswx=t
+	   	
+	      $scope.goods=function(){
+
+	      	if(v2 == 'appAndroid') {
+	      		android.toGoodsList()
+				return
+			} else if(v2=='appIos') {
+				testobject.ZTHCash()
+				return
+			}else{
+				location.href='http://m.caimiing.com/overt/cash-tasks'
+			}
+	      }
+	      $scope.share=function(type){//分享
+	   		if(type==2){
+	      		$('.share .wx ,.share .bro, .gray_tk').hide()
+	      		return
+	      	}
+	   		if(v2 == 'appAndroid') {
+	      		android.toShared(arr)
+				return
+			} else if(v2=='appIos') {
+				testobject.ZTHTestParameterone(arr)
+				return
+			}
+			if(t){
+				$('.share .wx , .gray_tk').show()
+			}else{
+				$('.share .bro , .gray_tk').show()
+			}
+	      }
+	   })
+	   
+</script>

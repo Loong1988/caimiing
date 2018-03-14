@@ -1,0 +1,154 @@
+@import'main.less'; 
+.a{
+    width:70vw/@w ;
+    font-size: 80vw/@w;
+    font-size: 45vw/@w;
+}
+ .search-text{
+     width: 50vw;
+     background: #fff;
+ } 
+ .search-text2{
+     width: 100%;
+    margin-top: 40vw/@w;
+     background: #fff;
+     .one{
+         font-size: 36vw/@w;
+         color: #666666;
+     }
+
+     li{
+         padding: 0 40vw/@w;
+         height: 110vw/@w;
+         line-height: 110vw/@w;
+         .text-overflow;
+     }
+     li:last-child:after{
+        background: #fff!important;
+        
+     }
+ }
+     .clean-btn{
+         width: 710vw/@w;
+         height: 120vw/@w;
+         background: #fff;
+         margin: auto;
+         margin-top: 60vw/@w;
+         font-size: 40vw/@w;
+         color: #222222;
+         text-align: center;
+         line-height: 120vw/@w;
+         border-radius: 12vw/@w;
+         
+     }
+.search-head{
+    height: 130vw/@w;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    
+    
+    .search-d1{
+        width: 100vw/@w;
+        height: 100%;
+        background: url(../img/common/fanhui.png) no-repeat center ~'/' 30vw/@w;
+    }
+
+        .search-d2{
+            font-size: 40vw/@w;
+            color: #222222;
+            flex: auto;
+            text-align: center;
+            line-height: 130vw/@w;;
+        }
+ 
+    .input-box{
+        height: 92vw/@w;
+         width:760vw/@w;
+           background: #EDEEF1;
+            border-radius: 46vw/@w;
+            display: flex;
+            align-items: center;
+            
+        .search-name{
+            width: 76%;
+             font-size: 4.5vw;
+             font-size: 36vw/@w;
+             border: none;
+             background: transparent;
+         }
+         .titiocn{
+             width: 7.7vw;
+             height: 100%;
+         }
+         .tit1{
+             background: url(../img/search/search.png) no-repeat center ~'/' 40vw/@w;
+             //margin:0 2vw;
+             
+         }
+         .tit2{
+             background: url(../img/search/delete.png) no-repeat center ~'/' 40vw/@w;
+             //margin:0 2vw;
+         }
+
+    }
+}
+
+
+.selet-goods{
+    height: 100%;
+    width: 980vw/@w;
+    background: #fff;
+    padding: 20px 0 0 0;
+    color: #222222;
+    font-size: 40vw/@w;
+    position: fixed;
+    top: 0;
+    .up{
+        overflow: scroll;
+        &>span{
+            margin-left: 40vw/@w;;
+        }
+    }
+    .ull{
+        padding: 0 30vw/@w;
+          display: flex;
+            flex-wrap: wrap;
+        margin-top: 34vw/@w;
+        li{
+            width: 280vw/@w;
+            height: 75vw/@w;
+            border-radius: 10vw/@w;
+            background: #EEEEEE;
+            font-size: 36vw/@w;
+            text-align: center;
+            line-height: 75vw/@w;
+            margin-bottom: 40vw/@w;
+            border: 1px solid transparent;
+        }
+        //1  4  7 10
+        li:nth-child(3n+2){
+           margin: 0 1vw;
+        }
+        .acts{
+          background: #fff; 
+          color: #F17E51; 
+          border: 1px solid #F17E51;
+        }
+    }
+    .foot-btn{
+        height: 130vw/@w;
+       display: flex;
+       &>div{
+           flex: 1;
+           text-align: center;
+           line-height: 130vw/@w;
+       }
+       .left{
+          background: #FCFCFC;
+       }
+       .right{
+           background: #F3E932;
+       }
+    }
+}

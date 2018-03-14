@@ -1,0 +1,71 @@
+@w:10.8;
+.text-overflow() { 
+ overflow: hidden;
+ text-overflow: ellipsis;
+ white-space: nowrap;
+} 
+        .list {
+        width: 1000vw/@w;
+        margin:0 40vw/@w;
+        .box {
+            width: 485vw/@w;
+            background: #fff;
+           display: inline-block;
+            margin-bottom: 28vw/@w;
+            header {
+              height: 485vw/@w;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            footer {
+                font-size: 36vw/@w;
+                height:237vw/@w;
+                position: relative;
+                .p1 {
+                    width:440vw/@w;
+                   .text-overflow;
+                    margin: 15vw/@w auto;
+                }
+                .p2 {
+                    width: 440vw/@w;
+                    margin: auto;
+                    text-align: right;
+                    color: #ef583a;
+                    margin-bottom:15vw/@w; 
+                    font-size: 40vw/@w;
+                    
+    
+//                  40px #ef583a  30px #aaaaaa
+                    span{
+                        text-decoration: line-through;
+                         font-size: 30vw/@w;
+                        color: #aaaaaa;
+                        vertical-align: text-top;
+                        margin-left: 1vw;
+                    }
+
+                }
+                .iphone-btn {
+                    width: 450vw/@w;
+                    height: 80vw/@w;
+                    line-height: 80vw/@w;
+                    background: #D85E45;
+                    color: #FFF;
+                    text-align: center;
+                    border-radius: 10vw/@w;
+                    margin: auto;
+                    position: absolute;
+                    bottom: 1.7vw;
+                    left: 0;
+                    right: 0;
+//                      font-weight: 900;
+                        font-size: 3.8vw;
+                }
+            }
+        }
+        .box:nth-child(2n) {
+            margin-left:28vw/@w;
+        }
+    }

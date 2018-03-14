@@ -1,0 +1,160 @@
+.scale-1px-bottom {
+  position: relative;
+  border: none;
+}
+.scale-1px-bottom:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #eeeeee;
+  width: 100%;
+  height: 1px;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+.scale-1px-top {
+  position: relative;
+  border: none;
+}
+.scale-1px-top:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #eeeeee;
+  width: 100%;
+  height: 1px;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+.onelineecp {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.btn-center {
+  width: 92.59259259259258vw;
+  margin: auto;
+  background: #F3E932;
+  height: 12.962962962962962vw;
+  border-radius: 1.4814814814814814vw;
+  font-size: 4.0740740740740735vw;
+  color: #222;
+  text-align: center;
+  line-height: 12.962962962962962vw;
+}
+.nolist {
+  overflow: hidden;
+}
+.nolist img {
+  width: 60vw;
+  margin: 50vw auto 0;
+  display: block;
+}
+.nolist p {
+  text-align: center;
+  margin: 3vw 0;
+  font-size: 3.5vw;
+  color: #aaaaaa;
+}
+.nolist div {
+  text-align: center;
+  height: 8vw;
+  width: 30vw;
+  background: #ecc027;
+  color: #FFF;
+  line-height: 8vw;
+  border-radius: 4vw;
+  font-size: 3.5vw;
+  margin: auto;
+}
+.all-head {
+  height: 44vw;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  background: url(../img/caimiWallet/bac.png) no-repeat center center / 100% !important;
+}
+.all-head .header {
+  background: transparent;
+}
+.all-head .down {
+  margin-top: 12.5vw;
+  overflow: hidden;
+}
+.all-head .down .p1 {
+  font-size: 3.7037037037037033vw;
+  color: #AAAAAA;
+  text-align: center;
+  margin: 4.62962962962963vw 0;
+}
+.all-head .down .p2 {
+  text-align: center;
+  color: #701b1b;
+  font-size: 9.25925925925926vw;
+}
+.all-head .down .p2 span {
+  font-size: 5.555555555555555vw;
+  position: relative;
+  top: -2px;
+}
+.list-wallet {
+  position: absolute;
+  top: 44vw;
+  width: 100%;
+}
+.list-wallet .ull li {
+  height: 22.22222222222222vw;
+  background: #fff;
+  display: flex;
+  padding-right: 3.7037037037037033vw;
+}
+.list-wallet .ull li .left {
+  width: 22.22222222222222vw;
+}
+.list-wallet .ull li .left img {
+  width: 14.814814814814813vw;
+  height: 14.814814814814813vw;
+  margin: 3.7037037037037033vw;
+}
+.list-wallet .ull li .right {
+  flex: 2.5;
+  padding: 5vw 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.list-wallet .ull li .right .p1 {
+  font-size: 4.0740740740740735vw;
+  color: #222222;
+  font-weight: 900;
+}
+.list-wallet .ull li .right .p1 span {
+  margin-left: 2vw;
+  font-weight: normal;
+}
+.list-wallet .ull li .right .p2 {
+  font-size: 3.7037037037037033vw;
+  color: #666;
+}
+.list-wallet .ull li .last {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+.list-wallet .ull li .last .p1 {
+  font-size: 5.925925925925926vw;
+  color: #f17e50;
+}
+.list-wallet .ull li .last .p2 {
+  font-size: 2.5925925925925926vw;
+  color: #aaa;
+}
+/*# sourceMappingURL=caimiWallet.css.map */

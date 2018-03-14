@@ -1,0 +1,143 @@
+$w:10.8;
+@function px($vw) {
+    @return $vw/$w+vw;
+}
+
+@mixin w100 {
+    width: 100%;
+}
+
+@mixin text-overflow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+body {
+    background: #59187B;
+}
+.fanhui img {
+    width: 7vw;
+    height: 7vw;
+    z-index: 2;
+    position: fixed;
+    left: 3.7vw;
+    top: 4vw;
+}
+.h5 {
+    font-size: 0;
+    .iphone-banner {
+        img {
+            @include w100;
+            height: px(556);
+        }
+    }
+    .goods {
+        width: px(1000);
+        margin: px(40) px(40) 0 px(40);
+    }
+    .name {
+        height: px(120);
+        color: #fff;
+        font-size: px(56);
+        text-align: center;
+        line-height: px(120);
+        background: url(../img/iphone/bac.png);
+        margin: px(30) 0;
+    }
+    .main {
+        width: px(1000);
+        margin: px(40);
+        .box {
+            width: px(485);
+            background: #fff;
+            float: left;
+            margin-bottom: px(28);
+            header {
+                height: px(450);
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            footer {
+                font-size: px(36);
+                height: px(237);
+                position: relative;
+                .p1 {
+                    width: px(440);
+                    @include text-overflow;
+                    margin: px(15) auto;
+                }
+                .p2 {
+                    width: px(440);
+                    margin: auto;
+                    text-align: right;
+                    color: #D85E45;
+                    margin-bottom: px(15);
+                }
+                .iphone-btn {
+                    width: px(450);
+                    height: px(80);
+                    line-height: px(80);
+                    background: #D85E45;
+                    color: #FFF;
+                    text-align: center;
+                    border-radius: px(10);
+                    margin: auto;
+                    position: absolute;
+                    bottom: 1.7vw;
+                    left: 0;
+                    right: 0;
+                }
+            }
+        }
+        .box:nth-child(2n) {
+            margin-left: px(28);
+        }
+    }
+    .line{
+        width:px(1000);
+        height: px(50);
+        display: flex;
+        margin:px(50) auto;
+        justify-content: space-between;
+        .d1{
+            width: px(360);
+             height: px(50);
+             position: relative;
+        }
+        .d2{
+            font-size: px(40);
+            text-align: center;
+            width: px(280);
+             height: px(50);
+             color: #FFFFFF;
+        }
+            .d1:after {
+            content: '';
+            position: absolute;
+            bottom: 50%;
+            left: 0;
+            background: #FFFFFF;
+            width: 100%;
+            height: 1px;
+            -webkit-transform: scaleY(0.5);
+            transform: scaleY(0.5);
+            -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+        }
+    }
+    .iphone-foot{
+        width: px(920);
+        padding: px(40);
+        margin: auto;
+        background: #632683;
+       font-size:px(32);
+       color: #fff;
+        margin-bottom:px(60);
+        p{
+            line-height: 200%;
+        }
+    }
+}

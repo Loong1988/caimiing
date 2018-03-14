@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="../js/angular1.4.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="../css/high.css"/>
+	</head>
+	<body ng-app="app" ng-controller="one">
+	<header class="head-all">
+		
+	
+		<header class="head">
+			<nav style="width: 14vw;" ng-repeat="item in tabs" ng-click="tabsChange($index)" ng-class="{act:act_index==$index}">{{item}}</nav>
+			<nav ng-click="selmethods()" style="width: 14vw;">{{sel}}</nav>
+		</header>
+
+	</header>
+		<div class="select" ng-hide="upsel">
+			<nav ng-click="selChange($index)" ng-repeat="item in selects" ng-class="{act:sel_index==$index}">{{item}}</nav>
+		</div>
+<div class="no-list3">
+		<img src="../img/nolist/nolist3.png"/>
+		<p class="notext">抱歉！暂无您搜索的任务</p>
+</div>
+<section class="list-se">
+	
+</section>
+		<div class="ng-gray" ng-hide="upsel" ng-click='selmethods()'></div>
+		<!--angular安全机制底部导航js失效。jsp无问题-->
+		<div ng-include="'footer.html'"></div>
+	</body>
+</html>
+<script src="../js/angular-animate1.46.js" type="text/javascript" charset="utf-8"></script>
+<!--<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular-animate.min.js"></script>-->
+<script type="text/javascript">
+	
+	var app=angular.module('app',['ngAnimate'])   
+	app.controller('one',function ($scope) {
+		$scope.tabs=['全部','购物','投资','贷款']
+		//$scope.tabs=['全部1','全部2','全部3','全部4']
+		$scope.selects=['不限','待接单','进行中']
+		$scope.act_index=0;
+		$scope.sel_index=0;
+		$scope.sel='筛选';
+		$scope.upsel=true;
+	    $scope.tabsChange=function(index){
+			$scope.act_index=index
+			console.log(index)
+	    }
+	    $scope.selChange=function(index){
+			$scope.sel_index=index
+			if(index==0){
+				$scope.sel='筛选';
+			}else{
+				$scope.sel=$scope.selects[index]
+			}
+			$scope.upsel=true;
+			console.log(index+'---')
+	    }
+	    $scope.selmethods=function(){
+			$scope.upsel=!$scope.upsel;
+	    }
+	})
+
+</script>
+<style type="text/css">
+	.head-all .head:after{
+		content: "";
+	    width: 1px;
+	    height: 4vw;
+	    background: #aaa;
+	    position: absolute;
+	    right: 20vw;
+	    top: 3vw;
+	    -webkit-transform: scaleX(0.5);
+	    transform: scaleX(0.5);
+	    -webkit-transform-origin: 0 0;
+	    transform-origin: 0 0;
+	}
+</style>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+
+	</head>
+	<body>
+		<section class="step">
+			<header class="tab"> 
+				<nav ng-repeat="item in tabs" ng-click="tabsChange($index)" ng-class="{act:act_index==$index}">{{item}}</nav>
+			</header>
+			<header class="head-line">
+				<nav ng-repeat="item in tabs" ng-class="{act:act_index==$index}">
+					<span></span>
+				</nav>
+				
+			</header>
+			
+			<div class="timer-left" ng-show="act_index==0">
+			<ul class="timer-shaft">
+				<li class="time1">
+					<div class="left">
+						<img src="../img/invest/time1.png"/>
+					</div>
+					<div class="right">
+						<p class="p1">分享页面</p>
+						<p class="p2">点击"推荐好友"按要求分享页面给好友</p>
+					</div>
+				</li>
+								<li class="time1">
+					<div class="left">
+						<img src="../img/invest/time2.png"/>
+					</div>
+					<div class="right">
+						<p class="p1">好友投资</p>
+						<p class="p2">等待好友通过分享页面进行注册投资</p>
+					</div>
+				</li>
+				<li class="time1">
+					<div class="left">
+						<img src="../img/invest/time3.png"/>
+					</div>
+					<div class="right">
+						<p class="p1">自动提现</p>
+						<p class="p2">等待“我的奖金”自动提现至微信钱包</p>
+					</div>
+				</li>
+				
+
+				<li class="time1">
+					<div class="left">
+						<img src="../img/invest/time4.png"/>
+					</div>
+					<div class="right">
+						<p class="p1">持续推广</p>
+						<p class="p2">建议每12小时分享一次提高推广奖金</p>
+					</div>
+				</li>
+			</ul>
+			
+			<div class="inform">
+				<nav class="line"></nav>
+				<nav class="text">推广须知</nav>
+				<nav class="line"></nav>
+			</div>
+			
+			<div class="inform-text">
+				<p>1.投资成功后48小时内发放收益。</p>
+				<p>2.好友领取现金券和投资时必须使用同一手机号。</p>
+				<p>3.好友投资成功后您和好友平分奖金</p>
+				<p>4.您的奖金将自动发放至您的微信钱包。好友奖金将以现金券的形式发放至其采蜜账户</p>
+			</div>
+			
+			<p class="green">推广即为同意<span>《采蜜免责声明 》</span></p>
+			</div>
+			<div class="timer-right" ng-show="act_index==1">
+				<section ng-show='list'>
+				<header>
+					<dl>
+						<dt></dt>
+						<dd></dd>
+					</dl>
+					<dl class="center">
+						<dt>3200</dt>
+						<dd>已获奖金(元)</dd>
+					</dl>
+					<dl class="right">
+						<dt>
+							<img src="../img/invest/Ranking.png"/>
+						</dt>
+						<dd>排行榜</dd>
+					</dl>
+				</header>
+				<p class="wx">奖金将自动转入您的<span>微信钱包<span></p>
+				<ul class="timer-shaft bonus">
+				<li class="time1">
+					<div class="left">
+						<img src="../img/invest/tick.png"/>
+					</div>
+					<div class="right">
+						<p class="p1">133****8999投资2000元  <span>250元</span></p>
+						<p class="p2">2017/08/27 14:32 <span>好友+250元</span></p>
+					</div>
+				</li>
+				<li class="time1">
+					<div class="left">
+						<img src="../img/invest/tick.png"/>
+					</div>
+					<div class="right">
+						<p class="p1">133****8999投资2000元  <span>250元</span></p>
+						<p class="p2">2017/08/27 14:32 <span>好友+250元</span></p>
+					</div>
+				</li>
+				<li class="time1">
+					<div class="left">
+						<img src="../img/invest/tick.png"/>
+					</div>
+					<div class="right">
+						<p class="p1">133****8999投资2000元  <span>250元</span></p>
+						<p class="p2">2017/08/27 14:32 <span>好友+250元</span></p>
+					</div>
+				</li>
+			</ul>
+			
+			</section>
+			<section class="no-list" ng-show="!list">
+				<img src="../img/invest/no_list.png"/>
+				<p class="p1">您还没收到奖金~</p>
+			</section>
+			<p class="last-time"> 上次推广时间：2天前 <span>请继续分享</span> </p>
+			<p class="safe">
+				<img src="../img/invest/safe.png"/>
+				如您有奖金未发放，<u>可进行维权</u></p>
+			</div>
+		</section>
+			<footer class="foot-btn">
+					<dl class="left">
+						<dt>我要投资</dt>
+						<dd>独享奖金</dd>
+					</dl>
+					<dl class="right">
+						<dt>推荐好友</dt>
+						<dd>好友投资，和您平分奖金</dd>
+					</dl>
+			</footer>
+	</body>
+</html>

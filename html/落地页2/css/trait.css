@@ -1,0 +1,26 @@
+.tr-head {
+  height: 7.5rem;
+}
+.tr-head img {
+  height: 100%;
+  width: 100%;
+}
+.list-box {
+  position: relative;
+  top: -1px;
+  background: url('../img/trait/bac-betwent.png') repeat center / 100%;
+}
+.tr-footer {
+  height: 0.2777777777777778rem;
+  position: relative;
+  top: -2px;
+  background: url('../img/trait/bac-down.png') repeat top center / 100% 100%;
+}
+.more {
+  text-align: center;
+  color: #ff8675;
+  font-size: 0.3333333333333333rem;
+  background: transparent;
+  height: 8vw;
+}
+/*# sourceMappingURL=trait.css.map */

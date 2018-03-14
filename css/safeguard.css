@@ -1,0 +1,146 @@
+.qq {
+  position: absolute;
+  height: 100%;
+  width: 17vw;
+  top: 0;
+  right: 0;
+  font-size: 3.333333333333333vw;
+  background: url('../img/safeguard/qq.png') no-repeat left center / 3.2407407407407405vw;
+  text-align: right;
+  padding-right: 3.7037037037037033vw;
+}
+.sel {
+  position: absolute;
+  width: 100%;
+  top: 24.5vw;
+}
+.sel .left .condition {
+  width: 85.18518518518518vw;
+  margin: 3.7037037037037033vw 3.7037037037037033vw 9.074074074074073vw;
+  background: #f7f7f7;
+  padding: 3.7037037037037033vw;
+  border-radius: 1.8518518518518516vw;
+}
+.sel .left .condition li {
+  min-height: 4.444444444444444vw;
+  line-height: 4.444444444444444vw;
+  font-size: 3.7037037037037033vw;
+  text-indent: 7.4074074074074066vw;
+  background: url(../img/invest/star.png) no-repeat left center / 4.444444444444444vw;
+}
+.sel .left .condition li:not(:last-child) {
+  margin-bottom: 3.7037037037037033vw;
+}
+.sel .left .condition li:last-child {
+  background: none;
+  text-indent: 0;
+  line-height: 170%;
+}
+.sel .left .condition li:last-child span {
+  color: #f17e50;
+}
+.sel .left .safe-btn {
+  width: 45.37037037037037vw;
+  height: 11.11111111111111vw;
+  color: #222222;
+  font-size: 4.0740740740740735vw;
+  text-align: center;
+  line-height: 11.11111111111111vw;
+  border-radius: 5.555555555555555vw;
+  background: #f3ea32;
+  margin: 9.25925925925926vw auto 0;
+}
+.sel .right .list-one table {
+  width: 100%;
+  padding: 3.4259259259259256vw 7.4074074074074066vw;
+  margin: 3.7037037037037033vw auto 0;
+  font-size: 4.0740740740740735vw;
+  color: #222222;
+  background: #ffffff;
+}
+.sel .right .list-one table tr {
+  height: 9.25925925925926vw;
+}
+.sel .right .list-one table tr td {
+  height: 9.25925925925926vw;
+}
+.sel .right .list-one table tr td:nth-child(1) {
+  width: 30.185185185185183vw;
+}
+.sel .right .list-one .scale-1px {
+  height: 11.11111111111111vw;
+  background: #FFF;
+  text-align: center;
+  line-height: 11.11111111111111vw;
+  font-size: 4.0740740740740735vw;
+  color: #222222;
+  padding: 0 7.4074074074074066vw;
+}
+.sel .right .list-one .scale-1px:after {
+  top: 0;
+}
+.sel .right .list-one .error {
+  display: flex;
+}
+.sel .right .list-one .error .sp1 {
+  width: 19.444444444444443vw;
+}
+.sel .right .list-one .error .sp2 {
+  color: #f17e50;
+}
+.sel .datum {
+  padding: 0 7.4074074074074066vw;
+}
+.sel .datum .name {
+  display: flex;
+}
+.sel .datum .name .left {
+  font-size: 4.0740740740740735vw;
+  color: #222222;
+  width: 30.185185185185183vw;
+}
+.sel .datum .name .right {
+  font-size: 3.7037037037037033vw;
+  color: #aaaaaa;
+}
+.sel .datum .name .right span {
+  background: #f7f7f7;
+  padding: 1vw 3vw;
+  border: 1px #f07f50 solid;
+  float: left;
+}
+.sel .datum .name .right .sp1 {
+  border-radius: 1.3888888888888888vw 0 0 1.3888888888888888vw;
+  border-right: none;
+}
+.sel .datum .name .right .sp2 {
+  border-radius: 0 1.3888888888888888vw 1.3888888888888888vw 0;
+  border-left: none;
+}
+.sel .datum .name .right .act {
+  font-size: 3.7037037037037033vw;
+  color: #fff;
+  background: #f07f50;
+}
+.sel .datum .list {
+  display: flex;
+  margin-top: 3.7037037037037033vw;
+}
+.sel .datum .list .left {
+  font-size: 4.0740740740740735vw;
+  color: #222222;
+  width: 30.185185185185183vw;
+}
+.sel .datum .list .right {
+  width: 53.7037037037037vw;
+}
+.sel .datum .list .right input {
+  border: 0;
+  border-bottom: 1px solid #AAAAAA;
+  height: 100%;
+  background: transparent;
+  width: 100%;
+  font-size: 3.7037037037037033vw;
+  color: #222222;
+}
+/*# sourceMappingURL=safeguard.css.map */

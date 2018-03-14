@@ -1,0 +1,157 @@
+
+ .qq {
+     position: absolute;
+     height: 100%;
+     width: 17vw;
+     top: 0;
+     right: 0;
+     font-size: 36vw/@w;
+     background: url('../img/safeguard/qq.png') no-repeat left center ~'/' 35vw/@w;
+     text-align: right;
+     padding-right: 40vw/@w;
+ }
+ 
+ .fontAll(@font,
+ @colot) {
+     font-size: @font;
+     color: @colot;
+ }
+ 
+ .sel {
+     position: absolute;
+    width: 100%;
+    top: 24.5vw;
+    .left{
+        .condition{
+           width: 920vw/@w;
+            margin: 40vw/@w 40vw/@w 98vw/@w ;
+            background: #f7f7f7;
+            padding: 40vw/@w;
+            border-radius: 20vw/@w;
+            li{
+                min-height: 48vw/@w;
+                line-height: 48vw/@w;
+                font-size: 40vw/@w;
+                text-indent: 80vw/@w;
+                background: url(../img/invest/star.png) no-repeat left center ~'/'48vw/@w;
+            }
+            li:not(:last-child){
+                margin-bottom: 40vw/@w;
+            }
+            li:last-child{
+               background: none;
+               text-indent: 0;
+                   line-height: 170%;
+               span{
+                   color: #f17e50;
+               }
+            }
+        }
+        .safe-btn{
+            width: 490vw/@w;
+            height: 120vw/@w;
+            color: #222222;
+            font-size: 44vw/@w;
+            text-align: center;
+            line-height: 120vw/@w;
+            border-radius:60vw/@w;
+                background: #f3ea32; 
+                margin:100vw/@w auto 0;
+        }
+    }
+     .right {
+         .list-one {
+             table {
+                 width: 100%;
+                 padding: 37vw/@w 80vw/@w;
+                 margin: 40vw/@w auto 0;
+                 .fontAll(44vw/@w,
+                 #222222);
+                 background: #ffffff;
+                 tr {
+                     height: 100vw/@w;
+                     td {
+                         height: 100vw/@w;
+                     }
+                     td:nth-child(1) {
+                         width: 326vw/@w;
+                     }
+                 }
+             }
+             .scale-1px{
+                 height: 120vw/@w;
+                 background: #FFF;
+                 text-align: center;
+                 line-height: 120vw/@w;
+                    .fontAll(44vw/@w,#222222);
+                    padding: 0 80vw/@w;
+             }
+             .scale-1px:after{
+                 top:0;
+             }
+             .error{
+                 display: flex;
+                 .sp1{
+                     width: 210vw/@w;
+                 }
+                 .sp2{
+                     color: #f17e50;
+                 }
+             }
+         }
+     }
+     .datum{
+         padding: 0 80vw/@w;
+         .name{
+             display: flex;
+             .left{
+                .fontAll(44vw/@w,#222222);
+                width: 326vw/@w;
+             }
+             .right{
+                .fontAll(40vw/@w,#aaaaaa);
+               span{
+//                  margin-right: 28vw/@w; 
+                    background: #f7f7f7;
+                    padding: 1vw 3vw;
+                    border:1px  #f07f50 solid;
+                    float: left;
+
+               }
+                .sp1{
+                    border-radius: 15vw/@w 0 0 15vw/@w;
+                    border-right: none;
+                }
+                .sp2{
+                    border-radius:0 15vw/@w 15vw/@w 0;
+                    border-left: none;
+                }
+               .act{
+                   .fontAll(40vw/@w,#fff);
+                   background: #f07f50;
+               }
+             }
+         }
+         .list{
+             display: flex;
+             margin-top: 40vw/@w;
+             .left{
+                .fontAll(44vw/@w,#222222);
+                width: 326vw/@w;
+             }
+             .right{
+                 width: 580vw/@w;
+                 input{
+                     border: 0;
+                     border-bottom: 1px solid #AAAAAA;
+                     height: 100%;
+                     background: transparent;
+                     width: 100%;
+                     .fontAll(40vw/@w,#222222);
+                 }
+             }
+
+         }
+     }
+ }
+  @w: 10.8;

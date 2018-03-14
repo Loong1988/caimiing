@@ -1,0 +1,35 @@
+.bac {
+  width: 100%;
+}
+.par {
+  position: relative;
+  font-size: 0;
+}
+.par-btn {
+  position: absolute;
+  bottom: 74vw;
+  width: 100%;
+}
+.par-btn .btn1,
+.par-btn .btn2 {
+  width: 59.72222222222222vw;
+  margin: auto;
+  display: block;
+}
+.share .wx {
+  position: fixed;
+  top: 5vw;
+  width: 34.629629629629626vw;
+  z-index: 100;
+  right: 5vw;
+}
+.share .bro {
+  position: fixed;
+  width: 45.27777777777777vw;
+  z-index: 100;
+  bottom: 5vw;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+/*# sourceMappingURL=partner.css.map */

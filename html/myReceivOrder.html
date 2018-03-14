@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/high.css"/>
+	</head>
+	<body ng-app="app" ng-controller="one">
+		<header class="header header_position">
+			<nav></nav>
+			我的接单
+		</header>
+		<header class="head-all">
+		
+	
+		<header class="head">
+			<nav ng-repeat="item in tabs" ng-click="tabsChange($index)" ng-class="{act:act_index==$index}">{{item}}</nav>
+		</header>
+		<header class="head-line scale-1px">
+			<span ng-repeat="item in tabs" ng-class="{act:act_index==$index}"></span>
+		</header>
+		
+			<div class="nolist">
+					<img src="../img/nolist/zhanghu.png">
+					<p>采蜜这么美，请别空手而归</p>
+					<div >去接单</div>
+			</div>
+	</header>
+	</body>
+</html>
+<style type="text/css">
+	.head-all{
+		top:12.5vw;
+	}
+</style>
+<script src="../js/angular1.4.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	
+	var app=angular.module('app',[])   
+	app.controller('one',function ($scope) {
+	  $scope.tabs=['进行中','已结束']
+	  	$scope.act_index=0;
+	    $scope.tabsChange=function(index){
+			$scope.act_index=index
+			console.log(index)
+	    }
+	})
+	
+</script>

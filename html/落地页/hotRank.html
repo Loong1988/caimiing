@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/hotRank.css" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="js/adaptive.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body ng-app="app" ng-controller="one" ng-cloak>
+		<header class="heads">
+			<img src="img/hot/titimg.png" />
+		</header>
+		<div class="fanhui" onclick="javascript:history.go(-1);">
+			<img src="img/fanhui.png" alt="">
+		</div>
+		<main>
+			<div class="new-box" ng-repeat="x in item" ng-click="goRouter(x.url)">
+				<nav class="left">
+					<img src="img/hot/{{x.img}}.png">
+				</nav>
+				<nav class="right">
+					<div class="up scale-1px">
+						<p class="tit">
+							<span class="commsum ng-binding">{{x.name}}</span>
+							<span class="red ng-binding">
+							￥{{x.currentPr}}<span class="del ng-binding">￥{{x.originalPr}} <span>
+						</span>
+							</span>
+							</span>
+						</p>
+						<p class="p-text ng-binding">{{x.summary}}</p>
+					</div>
+					<div class="down">
+						<nav class="left2">
+							推广次数：{{x.hot}}次
+						</nav>
+						<nav class="right2">
+							<dl>
+								<dd class="big ng-binding"><span>推荐赚</span>{{x.cashback}}<span>元</span></dd>
+							</dl>
+						</nav>
+					</div>
+				</nav>
+			</div>
+
+		</main>
+		<footer onclick="golink()">
+			查看更多>>
+		</footer>
+	</body>
+
+</html>
+<script src="js/angular1.4.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/hot.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/browsers.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/app.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	var v2 = GetQueryString('from')
+	var app = angular.module('app', [])
+	app.controller('one', function($scope) {
+		$scope.item = list1
+		$scope.goRouter = function(urls) {
+			var id = urls.substring(43)
+			if(v2 == 'appAndroid') {
+				android.toGoodsDes(id)
+			} else if(v2== 'appIos') {
+				testobject.ZTHPassParameter(id);
+			} else {
+				console.log('bbb')
+				location.href = urls
+			}
+		}
+	})
+
+
+</script>

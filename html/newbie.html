@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/newbie.css"/>
+		
+	</head>
+	<body ng-app="app" ng-controller="one" ng-cloak>
+		
+		<div class="fanhui" onclick="javascript:history.go(-1);">
+			<img src="../img/friend/fanhui.png" alt="">
+		</div>
+		<section class="newbie-body">
+			<img src="../img/newbie/head.png" class="newbie-head"/>
+			<div class="tab-bac">
+				<nav class="tab-box">
+					<div class="left" ng-class="{'act1':0==tab}" ng-click="tabchange(0)"></div>
+					<div class="right" ng-class="{'act2':1==tab}" ng-click="tabchange(1)"></div>
+				</nav>
+			</div>
+		</section>
+		<section class="showTab">
+			<div ng-if="tab==0" class="imgdiv">
+				<img src="../img/newbie/text1.png"/>
+			</div>
+			<div ng-if="tab==1" class="imgdiv">
+				<img src="../img/newbie/text2.png"/>
+			</div>
+		</section>
+	</body>
+</html>
+<script src="../js/jquery-2.1.1.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/angular1.4.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+
+	var app=angular.module('app',[])   
+	app.controller('one',function ($scope,$timeout) {
+	   $scope.tab=0;
+	    $scope.tabchange=function (num) {
+	    	$scope.tab=num;
+	    };
+	      $timeout(function(){
+             $scope.tab=1;
+          },1000);
+	})
+	
+</script>
+<script type="text/javascript">
+	 
+	$(document).ready(function(){
+		var top = $(".tab-bac").offset().top;
+             $(window).scroll(function() {
+                 //var top = $(".tab-bac").offset().top; //获取指定位置
+                 var scrollTop = $(window).scrollTop();  //获取当前滑动位置
+                 console.log((scrollTop+'-----'+top))
+                 if(scrollTop>=top){                 //滑动到该位置时执行代码
+                   $('.tab-bac').addClass('fixed').removeClass('normal')
+                   $('.showTab').addClass('ma')
+                 }else{
+                   $('.tab-bac').addClass('normal').removeClass('fixed')
+                    $('.showTab').removeClass('ma')
+                 }
+             });
+    });
+</script>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/InvestmentDetails.css"/>
+		<title></title>
+	</head>
+	<body ng-app="app" ng-controller="one" class="shoping">
+		<header class="header header_position">
+			<nav></nav>
+			购物推广
+		</header>
+		
+		<div class="task-detail">
+			<nav class="up">
+				<div class="left">
+					<img src="../img/index_2/tab1.jpg"/>
+				</div>
+				<div class="right">
+					<p class="name">iPhone X</p>
+					<div class="shoping-pri">
+						<span class="pri">
+							￥5999<span class="del">￥6888 <span>
+						</span>
+						<nav class="red"><span>+200</span><span class="small">元</span></nav>
+					</div>
+					
+
+				</div>
+			</nav>
+
+			<div class="price2">
+				<span>
+				售价9688元的iPhone X详细成本出炉:看完不淡定！ <u>详情介绍</u>
+				</span>
+			</div>
+		</div>
+		<!--底部公共部分-->
+		<div ng-include="'detailsCommon.html'"></div>
+		
+		<div class="gray_tk_wx">
+			<img src="../img/invest/wx.png" class="wx"/>
+			<img src="../img/invest/msg.png" class="msg"/>
+			<img src="../img/invest/browser.png" class="bro"/>
+		</div>
+		<div class="gray_tk_msg">
+			<div class="tk-msg">
+				<header>
+					投资要求
+				</header>
+				<ul>
+					<li>请使用采蜜注册手机号进行投资</li>
+					<li>注册新账号并投资</li>
+					<li>不可使用优惠券</li>
+
+				</ul>
+				<p class="msg-one">确认收货后<span>1个工作日</span>内发放奖金</p>
+				<div class="msg-btn">
+					前往投资
+				</div>
+			</div>
+			<img src="../img/invest/clear.png" class="clear"/>
+		</div>
+	</body>
+</html>
+<script src="../js/jquery-2.1.1.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/browsers.js" type="text/javascript" charset="utf-8"></script>
+<script src="../js/angular1.4.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	
+	var app=angular.module('app',[])   
+	app.controller('one',function ($scope) {
+		$scope.tabs=['推广步骤','我的奖金']
+		$scope.act_index=0;
+		$scope.list=true;//没有数据为false
+	    $scope.tabsChange=function(index){
+			$scope.act_index=index
+			console.log(index)
+	    }
+	})
+
+
+
+$('body').on('click','.foot-btn .left',function () {
+	$('.gray_tk_msg').show()
+})
+$('body').on('click','.foot-btn .right',function () {
+	console.log(2)
+	if(browsers()=='wx'){
+		$('.gray_tk_wx .bro').hide()
+	}else{
+		$('.gray_tk_wx .wx').hide()
+	}
+	$('.gray_tk_wx').show()
+})
+$('.gray_tk_wx').click(function () {
+	$(this).hide()
+})
+$('.gray_tk_msg .clear').click(function () {
+	$('.gray_tk_msg').hide()
+})
+
+</script>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<script src="../js/angular1.4.js" type="text/javascript" charset="utf-8"></script>
+<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+<link rel="stylesheet" type="text/css" href="../css/index.css"/>
+
+</head>
+
+<body ng-app="app"  ng-controller="one" >
+<!--轮播图-->
+<div class="swiper-head">
+            <uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+                <uib-slide ng-repeat="slide in slides" index="slide.id">
+                    <img ng-src="{{slide.image}}" style="margin:auto;">
+                    <div class="carousel-caption">
+                        <h4>Slide {{slide.id}}</h4>
+                        <p>{{slide.text}}</p>
+                    </div>
+                </uib-slide>
+            </uib-carousel>
+
+<!--轮播图 end-->
+<!--滑动通知-->
+<aside class="swiper-msg">
+	            <div class="left-img"></div>
+                <div class="scrollNews">
+                    <ul>
+                        <li>金融平台2016年6月26日正式上线！金融平台2016年6月26日正式上线！</li>
+                        <li>小红理财</li>
+                        <li>小红理财333333333333333</li>
+                        <li>小红理财4444444444444444</li>
+                    </ul>
+                </div>
+</aside>
+</div>
+<!--滑动通知end-->
+<section class="index-activity">
+	<div class="left">
+		<dl>
+			<dt>推广领现</dt>
+			<dd>2.0全新上线</dd>
+		</dl>
+		
+	</div>
+	<div class="right">		
+		<dl>
+			<dt>新手攻略</dt>
+			<dd>1分钟就毕业</dd>
+		</dl>
+	</div>
+</section>
+
+<section class="index-list">
+	<div class="box">
+		<div class="left">
+			<img src="../img/index_2/friend.png"/>
+		</div>
+		<div class="right">
+			<p class="friend">邀请好友</p>
+			<p class="f1">推荐成功，您和好友各得1元</p>
+			<p class="f1">200元封顶，多推多得</p>
+			<nav class="red"><span>+200</span><span class="small">元</span></nav>
+		</div>
+	</div>
+	<div class="expand">
+		推荐好友，0消费赚现金
+	</div>
+	<section class="task-list">
+<!--		<div class="order-head">
+			<nav class="tit">
+				<span class="unit">每万元</span>
+				<nav class="red"><span>+200</span><span class="small">元</span></nav>
+			</nav>
+		</div>-->
+		<div class="task-box task1">
+			<nav class="up">
+					<div class="left">
+						<img src="../img/index_2/tab1.jpg"/>
+					</div>
+					<div class="right scale-1px">
+						<p class="tit">理财理财<span class="red"><span>日利率 </span>0.02%</span> </p>
+						<p class="cont">投资每万元您和好友共得100元现金</p>
+					</div>
+			</nav>
+			<nav class="down">
+				<div class="d1">已投资</div>
+				<div class="d2">上次推广：1小时以前</div>
+				<div class="d3">
+<!--				<dl class="red">
+						<dt>每万元</dt>
+						<dd class="money"><span>+2910</span><span class="small">元</span></dd>
+					</dl>-->
+					<nav class="center-price">
+						 +214<span>元</span>
+					</nav>
+					<div class="small-text">每万元</div>
+				</div>
+			</nav>
+		</div>
+	<div class="task-box task2">
+		<nav class="up">
+				<div class="left">
+					<img src="../img/index_2/tab2.jpg"/>
+				</div>
+				<div class="right scale-1px">
+					<p class="tit">人人贷款<span class="red"><span>日利率 </span>0.02%</span> </p>
+					<p class="cont">贷款每万元您和好友共得100元现金</p>
+				</div>
+		</nav>
+		<nav class="down">
+			<div class="d1">待接单</div>
+			<div class="d2"></div>
+			<div class="d3">
+				<dl class="red">
+					<dt>每万元</dt>
+					<dd class="money"><span>+2910</span><span class="small">元</span></dd>
+				</dl>
+			</div>
+		</nav>
+	</div>
+	<div class="task-box task3">
+		<nav class="up">
+				<div class="left">
+					<img src="../img/index_2/tab3.jpg"/>
+				</div>
+				<div class="right scale-1px">
+					<p class="tit">iphone8
+						<span class="red">
+							￥5999<span class="del">￥6888 <span>
+						</span>
+					</p>
+					<p class="cont1">元您和safasdfas款每万元您和好友共得100元现金</p>
+					<p class="cont2">贷款每万元您和好友共得100元现金贷款每万元您和好友共得100元现金</p>
+				</div>
+		</nav>
+		<nav class="down">
+			<div class="d1">待接单</div>
+			<div class="d2">上次推广：1小时以前</div>
+			<div class="d3">
+				<dl class="red">
+					<dt>每单</dt>
+					<dd class="money"><span>+10</span><span class="small">元</span></dd>
+				</dl>
+			</div>
+		</nav>
+	</div>
+	<nav class="more">
+		更多
+		<img src="../img/index_2/_right.png"/>
+	</nav>
+		
+	</section>
+
+</section>
+
+
+
+<!--angular安全机制底部导航js失效。jsp无问题-->
+<div ng-include="'footer.html'"></div>
+
+</body>
+</html>
+<script type="text/javascript" src="../js/jquery-2.1.1.js"></script>
+<script src="../js/index.js" type="text/javascript" charset="utf-8"></script>
+
+<link rel="stylesheet" href="//apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.min.css">  
+<script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>   
+<script src="http://cdn.bootcss.com/angular-ui-bootstrap/1.1.2/ui-bootstrap-tpls.js"></script>
+<script type="text/javascript">
+	
+	var app=angular.module('app',['ui.bootstrap'])   
+	app.controller('one',function ($scope) {
+       $scope.myInterval = 2000;
+            $scope.noWrapSlides = false;
+            $scope.active = 0;
+            var slides = $scope.slides = [];
+            var addSlide = function () {
+                slides.push({
+                    image: 'http://lorempixel.com/600/300',
+                    text: 'Image1',
+                    id: 0
+                });
+                slides.push({
+                    image: 'http://lorempixel.com/601/300',
+                    text: 'Image2',
+                    id: 1
+                });
+            };
+
+            addSlide();
+        
+	})
+	
+</script>
+
+

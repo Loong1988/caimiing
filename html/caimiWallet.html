@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/caimiWallet.css"/>
+		<title></title>
+	</head>
+	<body ng-app="app" ng-controller="one">
+		<nav class="all-head ">
+			<header class="header header_position">
+				<nav></nav>
+				采蜜钱包
+			</header>
+			<div class="down">
+				
+				<p class="p1">总收入</p>
+				<p class="p2">0<span>元</span></p>
+			</div>
+		</nav>
+		
+			<div class="nolist" style="display: none;">
+					<img src="../img/nolist/zhanghu.png">
+					<p>采蜜这么美，请别空手而归</p>
+					<div >去接单</div>
+			</div>
+		
+		<section class="list-wallet">
+			<ul class="ull">
+				<li class="scale-1px-top" ng-repeat="x in item | orderBy: x">
+					<div class="left">
+						<img src="../img/caimiWallet/tit1.png"/>
+					</div>
+					<div class="right">
+						<p class="p1">{{x}}大圣理财<span>推荐好友</span></p>
+						<p class="p2">2018-02-31</p>
+					</div>
+					<div class="last">
+						<p class="p1">+2100</p>
+						<p class="p2">自动转账</p>
+					</div>
+				</li>
+			</ul>
+		</section>
+
+		
+		
+
+	</body>
+</html>
+<script src="../js/angular1.4.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	
+	var app=angular.module('app',[])   
+	app.controller('one',function ($scope) {
+		$scope.item=[12,23]
+		//$scope.item=[]
+	})
+	
+</script>

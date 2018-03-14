@@ -1,0 +1,98 @@
+@import'main.less';
+.ticket-list {
+    margin-top: 12.5vw;
+    padding: 40vw/@w 45vw/@w 40vw/@w;
+
+    .ticket {
+        width: 100%;
+        height: 300vw/@w;
+        margin:0 auto 38vw/@w;
+        
+        border-radius: 25vw/@w;
+        background: url(../img/myTicket/unused.png) no-repeat top ~'/'100%;
+        .left{
+            width:290vw/@w ;
+                float: left;
+            img{
+                width: 168vw/@w;
+                margin: 38vw/@w 61vw/@w 10vw/@w;
+            }
+            p{
+                 .fontAll(28vw, #666);
+                 width: 100%;
+                 text-align: center;
+            }
+        }
+        .ti_right {
+            width: 63%;
+            float: right;
+        }
+        .up0 {
+            width: 50%;
+            padding-right: 40vw/@w;
+            float: right;
+            text-align: right;
+            .fontAll(40vw, #FFf);
+            margin-top: 20vw/@w;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            &>span {
+                width: 3vw;
+                display: inline-block;
+                position: relative;
+                display: flex;
+                .line {
+                    display: inline-block;
+                    width: 1px;
+                    height: 3vw;
+                    background: #fff;
+                    margin-left: 1.5vw;
+                }
+            }
+        }
+        .up1 {
+            .fontAll(100vw, #FFEC4D);
+            //          margin: 30vw/@w 0 30vw/@w;
+            position: relative;
+            span {
+                .fontAll(70vw, #FFf);
+                position: relative;
+                top: -2px;
+            }
+            .tit {
+                width: 84vw/@w;
+                height: 32vw/@w;
+                border: 1px solid #fff;
+                .fontAll(22vw, #FFf);
+                border-radius: 10vw/@w ;
+                text-align: center;
+                line-height: 32vw/@w;
+                position: relative;
+                top: -3.5vw;
+                display: inline-block;
+                background: #ffa37a;
+            }
+        }
+        .up2 {
+            .fontAll(28vw, #fff)
+        }
+    }
+    .type2{
+        background: url(../img/myTicket/used.png) no-repeat top ~'/' 100%;
+        .up0,.ti_right{
+            color: #AAAAAA!important;
+            span{
+                 color: #AAAAAA;
+            }
+            .red{
+                color: #F17E50;
+                text-decoration: underline;
+            }
+        }
+        .up0 > span .line{
+            background:#AAAAAA!important;
+        }
+        
+    }
+}

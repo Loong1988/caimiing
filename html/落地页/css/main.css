@@ -1,0 +1,110 @@
+.main {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  background: url('../img/bac.png') no-repeat top;
+  background-size: cover;
+}
+.main .bac {
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+.main .goods {
+  width: 53.7037037037037vw;
+  margin: 82vw auto 2vw;
+  display: block;
+}
+.main .btn {
+  width: 53.7037037037037vw;
+  margin: auto;
+  display: block;
+}
+.main .line1 {
+  width: 100%;
+  margin-top: 30vw;
+}
+.main .line2 {
+  width: 100%;
+}
+.main .iphone-foot {
+  width: 85.1851851852vw;
+  padding: 3.7037037037vw;
+  margin: auto;
+  background: #723c87;
+  font-size: 2.962962963vw;
+  color: #fff;
+  margin-bottom: 5.5555555556vw;
+  margin-top: 5.555555555555555vw;
+}
+.main .iphone-foot p {
+  line-height: 200%;
+}
+.main .last {
+  text-align: center;
+  font-size: 2.962962962962963vw;
+  color: #af99ba;
+}
+.main .footdiv {
+  height: 6.944444444444444vw;
+}
+.list {
+  width: 92.59259259259258vw;
+  margin: 3.7037037037037033vw;
+}
+.list .box {
+  width: 44.907407407407405vw;
+  background: #fff;
+  display: inline-block;
+  margin-bottom: 2.5925925925925926vw;
+}
+.list .box header {
+  height: 44.907407407407405vw;
+}
+.list .box header img {
+  width: 100%;
+  height: 100%;
+}
+.list .box footer {
+  font-size: 3.333333333333333vw;
+  height: 21.944444444444443vw;
+  position: relative;
+}
+.list .box footer .p1 {
+  width: 40.74074074074074vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 1.3888888888888888vw auto;
+}
+.list .box footer .p2 {
+  width: 40.74074074074074vw;
+  margin: auto;
+  text-align: right;
+  color: #666666;
+  margin-bottom: 1.3888888888888888vw;
+  font-size: 2.962962962962963vw;
+}
+.list .box footer .p2 span {
+  color: #f17e50;
+  font-size: 3.5vw;
+}
+.list .box footer .iphone-btn {
+  width: 41.666666666666664vw;
+  height: 7.4074074074074066vw;
+  line-height: 7.4074074074074066vw;
+  background: #D85E45;
+  color: #FFF;
+  text-align: center;
+  border-radius: 0.9259259259259258vw;
+  margin: auto;
+  position: absolute;
+  bottom: 1.7vw;
+  left: 0;
+  right: 0;
+  font-size: 3.8vw;
+}
+.list .box:nth-child(2n) {
+  margin-left: 2.5925925925925926vw;
+}
+/*# sourceMappingURL=main.css.map */

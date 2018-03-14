@@ -1,0 +1,105 @@
+@import"main.less";
+body,
+html {
+    background: #fcf4ae;
+}
+
+.fanhui img {
+    width: 7vw;
+    height: 7vw;
+    z-index: 2;
+    position: fixed;
+    left: 3vw;
+    top: 4vw;
+}
+
+.rank-list {
+    overflow: hidden;
+    background: #fff;
+    width: 1000vw/@w;
+    margin: 0 auto 0;
+    border-radius: 30vw/@w 30vw/@w 0 0;
+    box-shadow: 0 -1px 10px 2px #dddddd;
+    height: 88vh;
+    margin-top: 12vh;
+    position: relative;
+    .biaoti {
+        width: 725vw/@w;
+        height: auto;
+        position: fixed;
+        z-index: 20;
+        left: 0;
+        right: 0;
+        margin: auto;
+        top: 0vw;
+    }
+}
+
+.list-wallet {
+    position: absolute;
+    top: 110vw/@w;
+    width: 100%;
+    font-size: 0;
+    .ull {
+        height: 82vh;
+        overflow: scroll;
+        li:nth-child(2n+1) {
+            background: #f7f7f7;
+        }
+        
+        li:nth-child(1){
+            background:#f7f7f7 url(../img/ranking/tit1.png) no-repeat 40vw/@w center ~'/'160vw/@w;
+        }
+        li:nth-child(2){
+            background: url(../img/ranking/tit2.png) no-repeat 40vw/@w center ~'/'160vw/@w;
+        }
+        li:nth-child(3){
+            background:#f7f7f7 url(../img/ranking/tit3.png) no-repeat 40vw/@w center ~'/'160vw/@w;
+        }
+        li {
+            height: 240vw/@w;
+            background: #fff;
+            display: flex;
+            padding-right: 40vw/@w;
+            .left {
+                .fontAll(100vw, #deb94e);
+                width: 240vw/@w;
+                text-align: center;
+                line-height: 240vw/@w;;
+                img {
+                    width: 160vw/@w;
+                    height: 160vw/@w;
+                    margin: 40vw/@w;
+                }
+            }
+            .right {
+                flex: 2.5;
+                padding: 54vw/@w 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                 
+                .p1 {
+                    .fontAll(44vw, #222222);
+                    font-weight: 900;
+                }
+                .p2 {
+                    .fontAll(32vw, #666);
+                }
+            }
+            .last {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                justify-content: center;
+                .p1 {
+                    .fontAll(64vw, #f17e50);
+                }
+                .p2 {
+                   .fontAll(40vw, #f17e50);
+                }
+            }
+        }
+    }
+}

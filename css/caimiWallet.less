@@ -1,0 +1,85 @@
+@import"main.less";
+ .all-head{
+     height: 44vw;
+         position: fixed;
+         z-index: 10;
+    width: 100%;
+     background: url(../img/caimiWallet/bac.png) no-repeat  center  center ~'/' 100%!important;
+     .header{
+         background: transparent;
+     }
+     .down{ 
+         margin-top: 12.5vw;
+         overflow: hidden;
+         .p1{ 
+             font-size: 40vw/@w;
+             color: #AAAAAA;
+             text-align: center;
+             margin: 50vw/@w 0;
+                 
+         }
+         .p2{
+             text-align: center;
+             color: #701b1b;
+             font-size: 100vw/@w;
+             span{
+                 font-size: 60vw/@w;
+                 position: relative;
+                 top: -2px;
+             }
+         }
+     }
+ }
+
+.list-wallet{ 
+    position: absolute;
+    top: 44vw;
+    width: 100%;
+    .ull{
+        li{
+            height: 240vw/@w;
+            background: #fff;
+            display: flex;
+            padding-right: 40vw/@w;
+            .left{
+                width: 240vw/@w;
+                img{
+                    width: 160vw/@w;
+                    height: 160vw/@w;
+                    margin: 40vw/@w;
+                }
+            }
+            .right{
+               flex: 2.5;
+               padding:  54vw/@w 0;
+                   display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+               .p1{
+                   .fontAll(44vw,#222222);
+                   font-weight: 900;
+                   span{
+                       margin-left: 2vw;
+                       font-weight: normal;
+                   }
+               }
+               .p2{
+                   .fontAll(40vw,#666);
+               }
+            }
+            .last{
+                flex: 1;
+                display: flex;
+                   flex-direction: column;
+                align-items: flex-end;
+                justify-content: center;
+                .p1{
+                    .fontAll(64vw,#f17e50);
+                }
+                .p2{
+                    .fontAll(28vw,#aaa);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/sugarDetail.css"/>
+		<title></title>
+	</head>
+	<body class="detail">
+			<header class="header header_position">
+				<nav onclick="javascript :history.go(-1);"></nav>
+				分享详情
+			</header>
+			<iframe class="iframe" src="https://www.baidu.com"></iframe>
+			
+			<footer class="foot">
+				我要分享
+			</footer>
+	</body>
+
+</html>
+<script src="../../js/jquery-2.1.1.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+
+$(function () {
+	var w=$('body').width()
+var h=$('body').height()
+var i=h-w*0.25
+$('.iframe').css('height',i)
+})
+</script>

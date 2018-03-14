@@ -1,0 +1,73 @@
+body {
+  background: #EEEEEE;
+}
+.tk-box {
+  position: fixed;
+  top: 30%;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+.tk-box .red-head {
+  width: 54.44444444444444vw;
+  display: block;
+  top: -13vw;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  z-index: 20;
+}
+.tk-box .red-bac {
+  width: 81.48148148148148vw;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: -20vw;
+  z-index: 1;
+}
+.tk-box .tkone {
+  width: 81.48148148148148vw;
+  height: 47.22222222222222vw;
+  background: #fff;
+  border-radius: 1.5vw;
+  z-index: 10;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.tk-box .tkone .p1 {
+  text-align: center;
+  font-size: 4.0740740740740735vw;
+  color: #022222;
+  margin: 11.11111111111111vw 0 3.7037037037037033vw 0;
+}
+.tk-box .tkone .p1 span {
+  color: #f17e50;
+}
+.tk-box .tkone .p2 {
+  text-align: center;
+  font-size: 3.7037037037037033vw;
+  color: #AAAAAA;
+  margin-bottom: 5.555555555555555vw;
+}
+.tk-box .tkone .tkone-btn {
+  width: 36.48148148148148vw;
+  height: 11.11111111111111vw;
+  background: #f3ea32;
+  border-radius: 5.555555555555555vw;
+  line-height: 11.11111111111111vw;
+  text-align: center;
+  font-size: 3.7037037037037033vw;
+  color: #222222;
+  margin: auto;
+}
+.tk-box .ma {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+/*# sourceMappingURL=tkone.css.map */

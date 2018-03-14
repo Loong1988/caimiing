@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/InvestmentDetails.css"/>
+		<title></title>
+	</head>
+	<body ng-app="app" ng-controller="one">
+		<header class="header header_position">
+			<nav></nav>
+			投资推广
+		</header>
+		
+		<div class="task-detail">
+			<nav class="up">
+				<div class="left">
+					<img src="../img/index_2/tab1.jpg"/>
+				</div>
+				<div class="right">
+					<p class="name">理财理财</p>
+					<nav class="red"><span>+200</span><span class="small">元</span></nav>
+					<nav class="lable">
+						<span>国资背景</span>
+						<span>国资背景</span>
+						<span>国资背景</span>
+						<span>国资背景</span>
+					</nav>
+				</div>
+			</nav>
+
+			<div class="price">
+				<dl>
+					<dt class="big">8.22<span>%</span></dt>
+					<dd>年化收益</dd>
+				</dl>
+				<dl class="moddle">
+					<dt>30<span>天</span></dt>
+					<dd>投资期限</dd>
+				</dl>
+				<dl>
+					<dt>122<span>元</span></dt>
+					<dd>起投金额</dd>
+				</dl>
+			</div>
+		</div>
+		<!--底部公共部分-->
+		<div ng-include="'detailsCommon.html'"></div>
+		
+
+	</body>
+</html>
+<script src="../js/angular1.4.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	
+	var app=angular.module('app',[])   
+	app.controller('one',function ($scope) {
+		$scope.tabs=['推广步骤','我的奖金']
+		$scope.act_index=0;
+		$scope.list=false;//没有数据为false
+	    $scope.tabsChange=function(index){
+			$scope.act_index=index
+			console.log(index)
+	    }
+	})
+	
+</script>

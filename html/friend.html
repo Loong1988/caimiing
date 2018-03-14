@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+				<link rel="stylesheet" type="text/css" href="../css/common.css" />
+		<link rel="stylesheet" type="text/css" href="../css/friend.css" />
+		
+	</head>
+	<body ng-app="app" ng-controller="one">
+		<img src="../img/friend2/bac-head.png" class="head-bac"/>
+		<section class="step">
+			<header class="tab"> 
+				<nav ng-repeat="item in tabs" ng-click="tabsChange($index)" ng-class="{act:act_index==$index}">{{item}}</nav>
+			</header>
+			<header class="head-line">
+				<nav ng-repeat="item in tabs" ng-class="{act:act_index==$index}">
+					<span></span>
+				</nav>
+			</header>
+		</section>
+		<section ng-if="act_index==0">
+			<nav class="img-bac">
+				<div class="up">
+					<span>￥</span>
+					
+							<div class="d1">1</div>
+							<div class="d2">2</div>
+							<div class="d3">3</div>
+					<span>元</span>
+				</div>
+				<div class="down">已获奖励</div>
+
+			</nav>			
+			<aside class="firend-list">
+				<div class="one">
+					<div class="component1">
+						<img src="../img/friend2/head_bac.png" class="head_bac"/>
+						<img src="../img/index_2/tab2.jpg" class="head_img"/>
+					</div>
+					<div class="component2">
+						<p class="tell">158****1344</p>
+						<p class="time">07/02/02</p>
+					</div>
+					<div class="component3">
+						<div class="wapper">
+							2<span>元</span>
+							<div class="sup">已发送</div>
+						</div>
+						
+					</div>
+				</div>
+			</aside>
+		</section>
+		<section ng-if="act_index==1" class="rule-friend">
+			
+			<div class="up">
+				<img src="../img/friend2/red1.png" class="red1"/>
+				<img src="../img/friend2/red2.png" class="red2"/>
+			</div>
+			
+			<footer class="rule">
+				<ul>
+					<li >1. 通过邀请好友把采蜜带给您的快乐分享给朋友</li>
+					<li>2. 您每成功邀请一位好友，您和好友可各获得1元现金奖金！奖金将自动打入您的微信钱包！ </li>
+					<li>3. 每位用户最多能享受100位好友带来的邀请奖励。</li>
+					<li>4. 本活动最终解释权归采蜜ing所有</li>
+				</ul>
+
+			</footer>
+			
+		</section>
+	</body>
+</html>
+<script src="../js/angular1.4.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	
+	var app=angular.module('app',[])   
+	app.controller('one',function ($scope) {
+		$scope.tabs=['成功记录','规则奖励']
+		$scope.act_index=0;
+		$scope.list=false;//没有数据为false
+	    $scope.tabsChange=function(index){
+			$scope.act_index=index
+			console.log(index)
+	    }
+	})
+	
+</script>

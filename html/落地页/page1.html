@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>领取红包</title>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/main.css"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	</head>
+	<body ng-app="app" ng-controller="one">
+		<main class='main'>
+			<!--<img src="img/bac.png" class="bac"/>-->
+			
+			<img src="img/goods.png" class="goods" ng-click="goLink()"/>
+			<img src="img/btn.png" class="btn" ng-click="appdown()"/>
+			<img src="img/line1.png" class="line1"/>
+			<div class="list">
+				<div ng-click="appdown()" class="box" ng-repeat="x in item| limitTo : 4 ">
+					<header>
+						<img src="img/{{x.img}}.png"/>
+					</header>
+					<footer>
+						<p class="p1">{{x.name}}</p>
+						<p class="p2">好友特惠价<span>￥{{x.money}}</span></p>
+						<div class="iphone-btn">推荐奖{{x.back}}元</div>
+					</footer>
+				</div>
+			</div>
+			<img src="img/line2.png" class="line2"/>
+			<footer class="iphone-foot">
+					<p>1.进入平台搜索商品并按要求推荐好友 </p>
+					<p>2.好友购买并确认收货后，您获得相应奖金</p>
+			</footer>
+			<p class="last">本活动最终解释权归采蜜ing所有</p>
+			<div class="footdiv"></div>
+		</main>
+	</body>
+</html>
+
+<!--<script src="js/angular1.4.js" type="text/javascript" charset="utf-8"></script>-->
+<script src="http://cdn.staticfile.org/angular.js/1.2.18/angular.min.js"></script>
+<script src="js/me-lazyload.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/json.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/browsers.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	
+	var app=angular.module('app',[])   
+	app.controller('one',function ($scope) {
+	   $scope.goLink=function(){
+		    location.href='https://h5.youzan.com/v2/goods/27a5svtcmfzbo'
+	   }
+	   	$scope.appdown=function(){
+	   		if(isapp() =='android'){
+	   			location.href='http://www.caimiing.com/download/collecthoney.apk'
+	   		}else if(isapp() =='ios'){
+	   			window.location.href='https://itunes.apple.com/cn/app/%E9%87%87%E8%9C%9Cing/id1310354812?mt=8'
+	   		}else{      
+	   			location.href='http://www.caimiing.com/download/collecthoney.apk'
+	   		}
+	   }
+	    $scope.item=list1
+	})
+	
+</script>

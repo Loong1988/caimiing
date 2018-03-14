@@ -1,0 +1,141 @@
+.scale-1px-bottom {
+  position: relative;
+  border: none;
+}
+.scale-1px-bottom:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #eeeeee;
+  width: 100%;
+  height: 1px;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+.scale-1px-top {
+  position: relative;
+  border: none;
+}
+.scale-1px-top:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #eeeeee;
+  width: 100%;
+  height: 1px;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+.onelineecp {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.btn-center {
+  width: 92.59259259259258vw;
+  margin: auto;
+  background: #F3E932;
+  height: 12.962962962962962vw;
+  border-radius: 1.4814814814814814vw;
+  font-size: 4.0740740740740735vw;
+  color: #222;
+  text-align: center;
+  line-height: 12.962962962962962vw;
+}
+.nolist {
+  overflow: hidden;
+}
+.nolist img {
+  width: 60vw;
+  margin: 30vw auto 0;
+  display: block;
+}
+.nolist p {
+  text-align: center;
+  margin: 3vw 0;
+  font-size: 3.5vw;
+  color: #aaaaaa;
+}
+.nolist div {
+  text-align: center;
+  height: 8vw;
+  width: 30vw;
+  background: #ecc027;
+  color: #FFF;
+  line-height: 8vw;
+  border-radius: 4vw;
+  font-size: 3.5vw;
+  margin: auto;
+}
+.newbie-body {
+  font-size: 0;
+}
+.newbie-body .newbie-head {
+  width: 100%;
+}
+.newbie-body .tab-bac {
+  height: 16.85185185185185vw;
+  position: static;
+  top: 0;
+  width: 100%;
+  background: url(../img/newbie/btn-bac.png) no-repeat center / 100% 100%;
+}
+.newbie-body .tab-bac .tab-box {
+  width: 78.7037037037037vw;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.newbie-body .tab-bac .tab-box > div {
+  width: 33.7962962962963vw;
+  height: 10.185185185185185vw;
+}
+.newbie-body .tab-bac .tab-box .left {
+  background: url(../img/newbie/btn1.png) no-repeat center / 100% 100%;
+}
+.newbie-body .tab-bac .tab-box .right {
+  background: url(../img/newbie/btn2.png) no-repeat center / 100% 100%;
+}
+.newbie-body .tab-bac .tab-box .act1 {
+  background: url(../img/newbie/btn1-act.png) no-repeat center / 100% 100%;
+}
+.newbie-body .tab-bac .tab-box .act2 {
+  background: url(../img/newbie/btn2-act.png) no-repeat center / 100% 100%;
+}
+.newbie-body .fixed {
+  position: fixed;
+}
+.newbie-body .normal {
+  position: static;
+}
+.showTab {
+  height: 100vh;
+}
+.showTab .imgdiv img {
+  width: 100%;
+}
+.ma {
+  margin-top: 16.85185185185185vw;
+}
+.fanhui img {
+  width: 7vw;
+  height: 7vw;
+  z-index: 2;
+  position: fixed;
+  left: 3vw;
+  top: 4vw;
+}
+.aaa {
+  width: 3.7037037037037033vw;
+  font-size: 4.0740740740740735vw;
+  font-size: 2.7777777777777777vw;
+}
+/*# sourceMappingURL=newbie.css.map */

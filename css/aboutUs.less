@@ -1,0 +1,89 @@
+@import"main.less";
+.abouts{
+    margin-top: 20vw;
+     .fontAll(36vw,#666);
+    .logo{
+        width: 165vw/@w;
+        height: 165vw/@w;
+        margin: auto;
+        display: block;
+    }
+    .version{
+       
+        text-align: center;
+        margin-top: 20vw/@w;
+        margin-bottom: 80vw/@w;
+    }
+    .text{
+        padding: 0 40vw/@w;
+        text-indent: 50vw/@w;
+        line-height: 150%;
+    }
+    .us{
+        background: #fff;
+        margin-top: 64vw/@w;
+        li{
+                height: 12.5vw;
+                line-height: 12.5vw;
+                font-size: 3.75vw;
+                background: #FFFFFF url(../img/common/tiaozhuan.png) no-repeat scroll 94vw center;
+                background-size: 2vw;
+                text-indent: 40vw/@w;
+        }
+        li:active{
+            background: #f7f7f7 url(../img/common/tiaozhuan.png) no-repeat scroll 94vw center;
+            background-size: 2vw;
+        }
+
+    }
+    .rule{
+        display: flex;
+        margin-top: 120vw/@w;
+        justify-content: center;
+        &>div{
+            width: 200vw/@w;
+        }
+        .left{
+            border-right: 1px solid #AAAAAA;
+        }
+        .right{
+            text-align: right;
+        }
+    }
+}
+
+@var1080:10.8;
+.boxone:first-of-type{
+    margin-top: 190vw/@var1080;
+}
+.boxone{
+    height: 720vw/@var1080;
+    background: #fff;
+    margin-top: 55vw/@var1080;
+    color: #222222;
+    header{
+        height: 140vw/@var1080;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 45vw/@var1080;
+       img{
+           width: 65vw/@var1080;
+           margin-right: 2vw;
+       }
+       .qq{
+          width:45vw/@var1080; 
+       }
+    }
+    .qrcode{
+        width: 400vw/@var1080;
+        display: block;
+        margin: auto;
+    }
+    .explain{
+        text-align: center; 
+        font-size: 35vw/@var1080;
+        margin-top:50vw/@var1080; ;
+    }
+    
+}

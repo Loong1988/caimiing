@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<script src="../js/angular1.4.js" type="text/javascript" charset="utf-8"></script>
+<link rel="stylesheet" type="text/css" href="../css/common.css"/>
+<link rel="stylesheet" type="text/css" href="../css/index.css"/>
+
+</head>
+
+<body ng-app="app"  ng-controller="one" >
+
+<!--滑动通知end-->
+<section class="index-activity">
+	<div class="left">
+		<dl>
+			<dt>推广领现</dt>
+			<dd>2.0全新上线</dd>
+		</dl>
+		
+	</div>
+	<div class="right">		
+		<dl>
+			<dt>新手攻略</dt>
+			<dd>1分钟就毕业</dd>
+		</dl>
+	</div>
+</section>
+
+<section class="index-list">
+	<div class="box">
+		<div class="left">
+			<img src="../img/index_2/friend.png"/>
+		</div>
+		<div class="right">
+			<p class="friend">邀请好友</p>
+			<p class="f1">推荐成功，您和好友各得1元</p>
+			<p class="f1">200元封顶，多推多得</p>
+			<nav class="red"><span>+200</span><span class="small">元</span></nav>
+		</div>
+	</div>
+	<div class="expand">
+		推荐好友，0消费赚现金
+	</div>
+	<section class="task-list">
+<!--		<div class="order-head">
+			<nav class="tit">
+				<span class="unit">每万元</span>
+				<nav class="red"><span>+200</span><span class="small">元</span></nav>
+			</nav>
+		</div>-->
+		<div class="new-box">
+			<nav class="left">
+				<img src="../img/aboutUs/logo.png"/>
+			</nav>
+			<nav class="right">
+				<div class="up scale-1px">
+					<p class="tit">
+						<span class="commsum ng-binding">智能体脂秤</span>
+						<span class="red">
+							￥136<span class="del">￥218 <span>
+						</span>
+					    </span></span>
+					</p>
+					<p class="p-text">智能APP专业健康解决方案</p>
+				</div>
+				<div class="down">
+					<nav class="left2">
+						<img src="../img/index_2/new-task.png"/>新品
+					</nav>
+					<nav class="right2">
+						<dl>
+							<dt class="small">每单</dt>
+							<dd class="big">+60<span>元</span></dd>
+						</dl>
+					</nav>
+				</div>
+			</nav>
+		</div>
+
+	
+	<nav class="more">
+		更多
+		<img src="../img/index_2/_right.png"/>
+	</nav>
+		
+	</section>
+
+</section>
+
+
+
+<!--angular安全机制底部导航js失效。jsp无问题-->
+<div ng-include="'footer.html'"></div>
+
+</body>
+</html>
+<script type="text/javascript" src="../js/jquery-2.1.1.js"></script>
+<script src="../js/index.js" type="text/javascript" charset="utf-8"></script>
+
+<link rel="stylesheet" href="//apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.min.css">  
+<script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>   
+<script src="http://cdn.bootcss.com/angular-ui-bootstrap/1.1.2/ui-bootstrap-tpls.js"></script>
+<script type="text/javascript">
+	
+	var app=angular.module('app',['ui.bootstrap'])   
+	app.controller('one',function ($scope) {
+       $scope.myInterval = 2000;
+            $scope.noWrapSlides = false;
+            $scope.active = 0;
+            var slides = $scope.slides = [];
+            var addSlide = function () {
+                slides.push({
+                    image: 'http://lorempixel.com/600/300',
+                    text: 'Image1',
+                    id: 0
+                });
+                slides.push({
+                    image: 'http://lorempixel.com/601/300',
+                    text: 'Image2',
+                    id: 1
+                });
+            };
+
+            addSlide();
+        
+	})
+	
+</script>
+
+
